@@ -13,8 +13,8 @@ import (
 
 	"golang.org/x/crypto/acme/autocert"
 
-	"github.com/kataras/iris/core/errors"
-	"github.com/kataras/iris/core/netutil"
+	"github.com/jukree/iris/core/errors"
+	"github.com/jukree/iris/core/netutil"
 )
 
 // Configurator provides an easy way to modify

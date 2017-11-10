@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 
-	"github.com/kataras/iris/sessions"
+	"github.com/jukree/iris/sessions"
 )
 
 var (

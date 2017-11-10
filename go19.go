@@ -3,10 +3,10 @@
 package iris
 
 import (
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/core/host"
-	"github.com/kataras/iris/core/router"
-	"github.com/kataras/iris/mvc"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/core/host"
+	"github.com/jukree/iris/core/router"
+	"github.com/jukree/iris/mvc"
 )
 
 type (
@@ -112,7 +112,7 @@ type (
 	// useful when `app.Controller` method is being used.
 	//
 	// A Controller can be declared by importing
-	// the "github.com/kataras/iris/mvc"
+	// the "github.com/jukree/iris/mvc"
 	// package for machines that have not installed go1.9 yet.
 	Controller = mvc.Controller
 	// SessionController is a simple `Controller` implementation
@@ -144,7 +144,7 @@ type (
 	// useful when `app.Controller` method is being used.
 	//
 	// A C controller can be declared by importing
-	// the "github.com/kataras/iris/mvc" as well.
+	// the "github.com/jukree/iris/mvc" as well.
 	C = mvc.C
 	// Response completes the `mvc/activator/methodfunc.Result` interface.
 	// It's being used as an alternative return value which

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/kataras/iris"
+import "github.com/jukree/iris"
 
 func main() {
 	app := iris.New()

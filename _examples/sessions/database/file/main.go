@@ -3,11 +3,11 @@ package main
 import (
 	"time"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 
 	"github.com/gorilla/securecookie"
-	"github.com/kataras/iris/sessions"
-	"github.com/kataras/iris/sessions/sessiondb/file"
+	"github.com/jukree/iris/sessions"
+	"github.com/jukree/iris/sessions/sessiondb/file"
 )
 
 func main() {

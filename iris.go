@@ -13,23 +13,23 @@ import (
 	"github.com/kataras/golog"
 
 	// context for the handlers
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/context"
 	// core packages, needed to build the application
-	"github.com/kataras/iris/core/errors"
-	"github.com/kataras/iris/core/host"
-	"github.com/kataras/iris/core/maintenance"
-	"github.com/kataras/iris/core/netutil"
-	"github.com/kataras/iris/core/router"
+	"github.com/jukree/iris/core/errors"
+	"github.com/jukree/iris/core/host"
+	"github.com/jukree/iris/core/maintenance"
+	"github.com/jukree/iris/core/netutil"
+	"github.com/jukree/iris/core/router"
 	// handlerconv conversions
-	"github.com/kataras/iris/core/handlerconv"
+	"github.com/jukree/iris/core/handlerconv"
 	// cache conversions
-	"github.com/kataras/iris/cache"
+	"github.com/jukree/iris/cache"
 	// view
-	"github.com/kataras/iris/view"
+	"github.com/jukree/iris/view"
 	// middleware used in Default method
 
-	requestLogger "github.com/kataras/iris/middleware/logger"
-	"github.com/kataras/iris/middleware/recover"
+	requestLogger "github.com/jukree/iris/middleware/logger"
+	"github.com/jukree/iris/middleware/recover"
 )
 
 var (
@@ -309,7 +309,7 @@ var (
 	// embedded into executable files.
 	//
 	//
-	// Examples: https://github.com/kataras/iris/tree/master/_examples/file-server
+	// Examples: https://github.com/jukree/iris/tree/master/_examples/file-server
 	StaticEmbeddedHandler = router.StaticEmbeddedHandler
 	// Gzip is a middleware which enables writing
 	// using gzip compression, if client supports.
@@ -328,7 +328,7 @@ var (
 	// Cache is a middleware providing cache functionalities
 	// to the next handlers, can be used as: `app.Get("/", iris.Cache, aboutHandler)`.
 	//
-	// Examples can be found at: https://github.com/kataras/iris/tree/master/_examples/#caching
+	// Examples can be found at: https://github.com/jukree/iris/tree/master/_examples/#caching
 	Cache = cache.Handler
 )
 
@@ -342,7 +342,7 @@ var (
 //
 // Use that instead of `StaticWeb` for root "/" file server.
 //
-// Example: https://github.com/kataras/iris/tree/master/_examples/file-server/single-page-application
+// Example: https://github.com/jukree/iris/tree/master/_examples/file-server/single-page-application
 func (app *Application) SPA(assetHandler context.Handler) {
 	s := router.NewSPABuilder(assetHandler)
 	wrapper := s.BuildWrapper(app.ContextPool)
@@ -471,7 +471,7 @@ type Runner func(*Application) error
 // Via host configurators you can configure the back-end host supervisor,
 // i.e to add events for shutdown, serve or error.
 // An example of this use case can be found at:
-// https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
+// https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
 // Look at the `ConfigureHost` too.
 //
 // See `Run` for more.
@@ -493,7 +493,7 @@ func Listener(l net.Listener, hostConfigs ...host.Configurator) Runner {
 // Via host configurators you can configure the back-end host supervisor,
 // i.e to add events for shutdown, serve or error.
 // An example of this use case can be found at:
-// https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
+// https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
 // Look at the `ConfigureHost` too.
 //
 // See `Run` for more.
@@ -517,7 +517,7 @@ func Server(srv *http.Server, hostConfigs ...host.Configurator) Runner {
 // Via host configurators you can configure the back-end host supervisor,
 // i.e to add events for shutdown, serve or error.
 // An example of this use case can be found at:
-// https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
+// https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
 // Look at the `ConfigureHost` too.
 //
 // See `Run` for more.
@@ -543,7 +543,7 @@ func Addr(addr string, hostConfigs ...host.Configurator) Runner {
 // Via host configurators you can configure the back-end host supervisor,
 // i.e to add events for shutdown, serve or error.
 // An example of this use case can be found at:
-// https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
+// https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
 // Look at the `ConfigureHost` too.
 //
 // See `Run` for more.
@@ -583,7 +583,7 @@ func TLS(addr string, certFile, keyFile string, hostConfigs ...host.Configurator
 // Via host configurators you can configure the back-end host supervisor,
 // i.e to add events for shutdown, serve or error.
 // An example of this use case can be found at:
-// https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
+// https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown/main.go
 // Look at the `ConfigureHost` too.
 //
 // Usage:

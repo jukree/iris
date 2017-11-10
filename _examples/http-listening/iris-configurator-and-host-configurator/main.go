@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kataras/iris/_examples/http-listening/iris-configurator-and-host-configurator/counter"
+	"github.com/jukree/iris/_examples/http-listening/iris-configurator-and-host-configurator/counter"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 )
 
 func main() {

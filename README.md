@@ -1,4 +1,4 @@
-# ![Logo created by @santoshanand](logo_white_35_24.png) Iris [![build status](https://img.shields.io/travis/kataras/iris/master.svg?style=flat-square)](https://travis-ci.org/kataras/iris)[![report card](https://img.shields.io/badge/report%20card-a%2B-ff3333.svg?style=flat-square)](http://goreportcard.com/report/kataras/iris)[![github closed issues](https://img.shields.io/github/issues-closed-raw/kataras/iris.svg?style=flat-square)](https://github.com/kataras/iris/issues?q=is%3Aissue+is%3Aclosed)[![release](https://img.shields.io/github/release/kataras/iris.svg?style=flat-square)](https://github.com/kataras/iris/releases)[![view examples](https://img.shields.io/badge/learn%20by-examples-0077b3.svg?style=flat-square)](https://github.com/kataras/iris/tree/master/_examples)[![chat](https://img.shields.io/badge/community-%20chat-00BCD4.svg?style=flat-square)](https://kataras.rocket.chat/channel/iris)[![CLA assistant](https://cla-assistant.io/readme/badge/kataras/iris?style=flat-square)](https://cla-assistant.io/kataras/iris)
+# ![Logo created by @santoshanand](logo_white_35_24.png) Iris [![build status](https://img.shields.io/travis/kataras/iris/master.svg?style=flat-square)](https://travis-ci.org/kataras/iris)[![report card](https://img.shields.io/badge/report%20card-a%2B-ff3333.svg?style=flat-square)](http://goreportcard.com/report/kataras/iris)[![github closed issues](https://img.shields.io/github/issues-closed-raw/kataras/iris.svg?style=flat-square)](https://github.com/jukree/iris/issues?q=is%3Aissue+is%3Aclosed)[![release](https://img.shields.io/github/release/kataras/iris.svg?style=flat-square)](https://github.com/jukree/iris/releases)[![view examples](https://img.shields.io/badge/learn%20by-examples-0077b3.svg?style=flat-square)](https://github.com/jukree/iris/tree/master/_examples)[![chat](https://img.shields.io/badge/community-%20chat-00BCD4.svg?style=flat-square)](https://kataras.rocket.chat/channel/iris)[![CLA assistant](https://cla-assistant.io/readme/badge/kataras/iris?style=flat-square)](https://cla-assistant.io/kataras/iris)
 
 <a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/Qw6E1MTHvUJW6BtwUUf9qwsy/kataras/iris'>
   <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/Qw6E1MTHvUJW6BtwUUf9qwsy/kataras/iris.svg' />
@@ -8,7 +8,7 @@ Iris is a fast, simple and efficient web framework for Go.
 
 Iris provides a beautifully expressive and easy to use foundation for your next website, API, or distributed app.
 
-Learn what [others say about Iris](https://www.youtube.com/watch?v=jGx0LkuUs4A) and [star](https://github.com/kataras/iris/stargazers) this github repository to stay [up to date](https://facebook.com/iris.framework).
+Learn what [others say about Iris](https://www.youtube.com/watch?v=jGx0LkuUs4A) and [star](https://github.com/jukree/iris/stargazers) this github repository to stay [up to date](https://facebook.com/iris.framework).
 
 [![Iris vs .NET Core(C#) vs Node.js (Express)](https://iris-go.com/images/benchmark-new-gray.png)](_benchmarks)
 
@@ -42,7 +42,7 @@ If you're coming from [nodejs](https://nodejs.org) world, Iris is the [expressjs
 ## Table Of Content
 
 * [Installation](#installation)
-* [Latest changes](https://github.com/kataras/iris/blob/master/HISTORY.md#tu-02-november-2017--v855)
+* [Latest changes](https://github.com/jukree/iris/blob/master/HISTORY.md#tu-02-november-2017--v855)
 * [Getting started](#getting-started)
 * [Learn](_examples/)
     * [MVC (Model View Controller)](_examples/#mvc) **NEW**
@@ -63,7 +63,7 @@ If you're coming from [nodejs](https://nodejs.org) world, Iris is the [expressjs
     * [Websockets](_examples/#websockets)
     * [Miscellaneous](_examples/#miscellaneous)
     * [POC: Convert the medium-sized project "Parrot" from native to Iris](https://github.com/iris-contrib/parrot)
-    * [POC: Isomorphic react/hot reloadable/redux/css-modules starter kit](https://github.com/kataras/iris-starter-kit)
+    * [POC: Isomorphic react/hot reloadable/redux/css-modules starter kit](https://github.com/jukree/iris-starter-kit)
     * [Typescript Automation Tools](typescript/#table-of-contents)
     * [Tutorial: A URL Shortener Service using Go, Iris and Bolt](https://medium.com/@kataras/a-url-shortener-service-using-go-iris-and-bolt-4182f0b00ae7)
     * [Tutorial: Online Visitors](_examples/tutorial/online-visitors)
@@ -82,7 +82,7 @@ If you're coming from [nodejs](https://nodejs.org) world, Iris is the [expressjs
 The only requirement is the [Go Programming Language](https://golang.org/dl/)
 
 ```sh
-$ go get -u github.com/kataras/iris
+$ go get -u github.com/jukree/iris
 ```
 
 Iris takes advantage of the [vendor directory](https://docs.google.com/document/d/1Bz5-UB7g2uPBdOx-rw5t9MxJwkfpx90cqG9AFL0JAYo) feature. You get truly reproducible builds, as this method guards against upstream renames and deletes.
@@ -92,7 +92,7 @@ Iris takes advantage of the [vendor directory](https://docs.google.com/document/
 ```go
 package main
 
-import "github.com/kataras/iris"
+import "github.com/jukree/iris"
 
 func main() {
     app := iris.New()
@@ -129,7 +129,7 @@ func main() {
 }
 ```
 
-> Learn more about path parameter's types by clicking [here](https://github.com/kataras/iris/blob/master/_examples/routing/dynamic-path/main.go#L31).
+> Learn more about path parameter's types by clicking [here](https://github.com/jukree/iris/blob/master/_examples/routing/dynamic-path/main.go#L31).
 
 ```html
 <!-- file: ./views/hello.html -->
@@ -159,8 +159,8 @@ Guidelines for bootstrapping applications can be found at the [_examples/structu
 package main
 
 import (
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/mvc"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/mvc"
 )
 
 func main() {
@@ -212,7 +212,7 @@ func (c *HelloWorldController) GetWelcomeBy(name string, numTimes int) {
 }
 ```
 
-> The [_examples/mvc](_examples/mvc) and [mvc/controller_test.go](https://github.com/kataras/iris/blob/master/mvc/controller_test.go) files explain each feature with simple paradigms, they show how you can take advandage of the Iris MVC Binder, Iris MVC Models and many more...
+> The [_examples/mvc](_examples/mvc) and [mvc/controller_test.go](https://github.com/jukree/iris/blob/master/mvc/controller_test.go) files explain each feature with simple paradigms, they show how you can take advandage of the Iris MVC Binder, Iris MVC Models and many more...
 
 Every `exported` func prefixed with an HTTP Method(`Get`, `Post`, `Put`, `Delete`...) in a controller is callable as an HTTP endpoint. In the sample above, all funcs writes a string to the response. Note the comments preceding each method.
 
@@ -242,9 +242,9 @@ The example below is not intended to be used in production but it's a good showc
 package main
 
 import (
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/middleware/basicauth"
-    "github.com/kataras/iris/mvc"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/middleware/basicauth"
+    "github.com/jukree/iris/mvc"
 )
 
 // Movie is our sample data structure.
@@ -397,7 +397,7 @@ type Movie struct {
 
 package datasource
 
-import "github.com/kataras/iris/_examples/mvc/overview/datamodels"
+import "github.com/jukree/iris/_examples/mvc/overview/datamodels"
 
 // Movies is our imaginary data source.
 var Movies = map[int64]datamodels.Movie{
@@ -452,7 +452,7 @@ import (
     "errors"
     "sync"
 
-    "github.com/kataras/iris/_examples/mvc/overview/datamodels"
+    "github.com/jukree/iris/_examples/mvc/overview/datamodels"
 )
 
 // Query represents the visitor and action queries.
@@ -632,8 +632,8 @@ The layer which has access to call functions from the "repositories" and "models
 package services
 
 import (
-    "github.com/kataras/iris/_examples/mvc/overview/datamodels"
-    "github.com/kataras/iris/_examples/mvc/overview/repositories"
+    "github.com/jukree/iris/_examples/mvc/overview/datamodels"
+    "github.com/jukree/iris/_examples/mvc/overview/repositories"
 )
 
 // MovieService handles some of the CRUID operations of the movie datamodel.
@@ -702,9 +702,9 @@ Example:
 
 ```go
 import (
-    "github.com/kataras/iris/_examples/mvc/overview/datamodels"
+    "github.com/jukree/iris/_examples/mvc/overview/datamodels"
 
-    "github.com/kataras/iris/context"
+    "github.com/jukree/iris/context"
 )
 
 type Movie struct {
@@ -762,11 +762,11 @@ package controllers
 import (
     "errors"
 
-    "github.com/kataras/iris/_examples/mvc/overview/datamodels"
-    "github.com/kataras/iris/_examples/mvc/overview/services"
+    "github.com/jukree/iris/_examples/mvc/overview/datamodels"
+    "github.com/jukree/iris/_examples/mvc/overview/services"
 
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/mvc"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/mvc"
 )
 
 // MovieController is our /movies controller.
@@ -845,7 +845,7 @@ package controllers
 import (
     "errors"
 
-    "github.com/kataras/iris/mvc"
+    "github.com/jukree/iris/mvc"
 )
 
 // HelloController is our sample controller
@@ -867,7 +867,7 @@ var helloView = mvc.View{
 // `mvc.Result` is just an interface with a `Dispatch` function.
 // `mvc.Response` and `mvc.View` are the built'n result type dispatchers
 // you can even create custom response dispatchers by
-// implementing the `github.com/kataras/iris/mvc#Result` interface.
+// implementing the `github.com/jukree/iris/mvc#Result` interface.
 func (c *HelloController) Get() mvc.Result {
     return helloView
 }
@@ -905,7 +905,7 @@ func (c *HelloController) GetBy(name string) mvc.Result {
 
 package middleware
 
-import "github.com/kataras/iris/middleware/basicauth"
+import "github.com/jukree/iris/middleware/basicauth"
 
 // BasicAuth middleware sample.
 var BasicAuth = basicauth.New(basicauth.Config{
@@ -958,13 +958,13 @@ This file creates any necessary component and links them together.
 package main
 
 import (
-    "github.com/kataras/iris/_examples/mvc/overview/datasource"
-    "github.com/kataras/iris/_examples/mvc/overview/repositories"
-    "github.com/kataras/iris/_examples/mvc/overview/services"
-    "github.com/kataras/iris/_examples/mvc/overview/web/controllers"
-    "github.com/kataras/iris/_examples/mvc/overview/web/middleware"
+    "github.com/jukree/iris/_examples/mvc/overview/datasource"
+    "github.com/jukree/iris/_examples/mvc/overview/repositories"
+    "github.com/jukree/iris/_examples/mvc/overview/services"
+    "github.com/jukree/iris/_examples/mvc/overview/web/controllers"
+    "github.com/jukree/iris/_examples/mvc/overview/web/middleware"
 
-    "github.com/kataras/iris"
+    "github.com/jukree/iris"
 )
 
 func main() {
@@ -1032,7 +1032,7 @@ The author of Iris is [@kataras](https://github.com/kataras), you can reach him 
 
 [List of all Authors](AUTHORS)
 
-[List of all Contributors](https://github.com/kataras/iris/graphs/contributors)
+[List of all Contributors](https://github.com/jukree/iris/graphs/contributors)
 
 Help this project to continue deliver awesome and unique features with the higher code quality as possible by donating any amount via [PayPal](https://www.paypal.me/kataras) or [BTC](https://iris-go.com/v8/donate).
 
@@ -1042,7 +1042,7 @@ For more information about contributing to the Iris project please check the [CO
 
 Iris needs your help, please think about contributing to the translation of the [README](README.md) and https://iris-go.com, you will be rewarded.
 
-Instructions can be found at: https://github.com/kataras/iris/issues/796
+Instructions can be found at: https://github.com/jukree/iris/issues/796
 
 ### 03, October 2017 | Iris User Experience Report
 

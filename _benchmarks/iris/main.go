@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/context"
 )
 
 func main() {

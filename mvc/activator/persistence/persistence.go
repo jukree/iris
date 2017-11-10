@@ -3,7 +3,7 @@ package persistence
 import (
 	"reflect"
 
-	"github.com/kataras/iris/mvc/activator/field"
+	"github.com/jukree/iris/mvc/activator/field"
 )
 
 // Controller is responsible to load from the original

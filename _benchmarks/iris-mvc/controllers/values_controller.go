@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/kataras/iris/mvc"
+import "github.com/jukree/iris/mvc"
 
 // ValuesController is the equivalent
 // `ValuesController` of the .net core 2.0 mvc application.

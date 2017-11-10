@@ -2,12 +2,12 @@
 
 ### Looking for free and real-time support?
 
-    https://github.com/kataras/iris/issues
+    https://github.com/jukree/iris/issues
     https://chat.iris-go.com
 
 ### Looking for previous versions?
 
-    https://github.com/kataras/iris/releases
+    https://github.com/jukree/iris/releases
 
 ### Should I upgrade my Iris?
 
@@ -15,11 +15,11 @@ Developers are not forced to upgrade if they don't really need it. Upgrade whene
 
 > Iris uses the [vendor directory](https://docs.google.com/document/d/1Bz5-UB7g2uPBdOx-rw5t9MxJwkfpx90cqG9AFL0JAYo) feature, so you get truly reproducible builds, as this method guards against upstream renames and deletes.
 
-**How to upgrade**: Open your command-line and execute this command: `go get -u github.com/kataras/iris` or let the automatic updater do that for you.
+**How to upgrade**: Open your command-line and execute this command: `go get -u github.com/jukree/iris` or let the automatic updater do that for you.
 
 # Tu, 02 November 2017 | v8.5.5
 
-- fix [audio/mpeg3 does not appear to be a valid registered mime type#798](https://github.com/kataras/iris/issues/798]) reported by @kryptodev,
+- fix [audio/mpeg3 does not appear to be a valid registered mime type#798](https://github.com/jukree/iris/issues/798]) reported by @kryptodev,
 - improve the updater's performance and moved that into the framework itself,
     - ask for authentication only when a new version is released.
 - sessiondb's `.Async` functions do nothing now, all session databases(back-end persistence storage) should run in-sync, @speedwheel helped to find a misbehavior because of that setting,
@@ -34,7 +34,7 @@ _TODO;_
 
 # Th, 26 October 2017 | v8.5.4
 
-This version is part of the [releases](https://github.com/kataras/iris/releases).
+This version is part of the [releases](https://github.com/jukree/iris/releases).
 
 ## Version Updater
 
@@ -48,14 +48,14 @@ Not any new features or fixes (all reported bugs are fixed) in this version, jus
 
 Iris needs your help, please think about contributing to the translation of the [README](README.md) and https://iris-go.com, you will be rewarded.
 
-Instructions can be found at: https://github.com/kataras/iris/issues/796
+Instructions can be found at: https://github.com/jukree/iris/issues/796
 
 # Su, 22 October 2017 | v8.5.3
 
-- FIX: [Websocket: memory leak on startPinger](https://github.com/kataras/iris/issues/787) by @jerson with PR: https://github.com/kataras/iris/pull/788
-- FIX: [Websocket: time.Ticker cause memory leak](https://github.com/kataras/iris/issues/791) by @jerson with PR: https://github.com/kataras/iris/pull/792
-- NEW: [Websocket: total connections](https://github.com/kataras/iris/issues/793) by @jerson with PR: https://github.com/kataras/iris/pull/795
-- NEW: Add a `raven` middleware inside [iris-contrib/middleware/raven](https://github.com/iris-contrib/middleware/tree/master/raven) as requested at "[Can I use iris with sentry?](https://github.com/kataras/iris/issues/785)"
+- FIX: [Websocket: memory leak on startPinger](https://github.com/jukree/iris/issues/787) by @jerson with PR: https://github.com/jukree/iris/pull/788
+- FIX: [Websocket: time.Ticker cause memory leak](https://github.com/jukree/iris/issues/791) by @jerson with PR: https://github.com/jukree/iris/pull/792
+- NEW: [Websocket: total connections](https://github.com/jukree/iris/issues/793) by @jerson with PR: https://github.com/jukree/iris/pull/795
+- NEW: Add a `raven` middleware inside [iris-contrib/middleware/raven](https://github.com/iris-contrib/middleware/tree/master/raven) as requested at "[Can I use iris with sentry?](https://github.com/jukree/iris/issues/785)"
 
 ### 🎗️ People that you should follow
 
@@ -78,7 +78,7 @@ Help this project to continue deliver awesome and unique features with the highe
 
 # Th, 12 October 2017 | v8.5.2
 
-This version is part of the [releases](https://github.com/kataras/iris/releases).
+This version is part of the [releases](https://github.com/jukree/iris/releases).
 
 ## MVC
 
@@ -88,13 +88,13 @@ New example which covers the Service and Repository layers side-by-side with the
 
 ## Websocket
 
-Fix(?) https://github.com/kataras/iris/issues/782 by @jerson with PR:  https://github.com/kataras/iris/pull/783.
+Fix(?) https://github.com/jukree/iris/issues/782 by @jerson with PR:  https://github.com/jukree/iris/pull/783.
 
 ## Minor
 
-Add some minor comments for the view/django's origin type getters-- as pushed at PR: [#765](https://github.com/kataras/iris/pull/765).
+Add some minor comments for the view/django's origin type getters-- as pushed at PR: [#765](https://github.com/jukree/iris/pull/765).
 
-[sessions/sessiondb/badger](sessions/sessiondb/badger) vendored with: https://github.com/kataras/iris/commit/e7517ec79b45673e7cad353e52023ebd7237cf38.
+[sessions/sessiondb/badger](sessions/sessiondb/badger) vendored with: https://github.com/jukree/iris/commit/e7517ec79b45673e7cad353e52023ebd7237cf38.
 
 # Tu, 10 October 2017 | v8.5.1
 
@@ -131,9 +131,9 @@ The example below is not intended to be used in production but it's a good showc
 package main
 
 import (
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/middleware/basicauth"
-    "github.com/kataras/iris/mvc"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/middleware/basicauth"
+    "github.com/jukree/iris/mvc"
 )
 
 // Movie is our sample data structure.
@@ -254,31 +254,31 @@ Another good example with a typical folder structure, that many developers are u
 
 # Fr, 06 October 2017 | v8.4.5
 
-- Badger team added support for transactions [yesterday](https://github.com/dgraph-io/badger/commit/06242925c2f2a5e73dc688e9049004029dd7f9f7), therefore the [badger session database](sessions/sessiondb/badger) is updated via https://github.com/kataras/iris/commit/0b48927562a2202809a7674ebedb738dc3da57e8.
-- MVC: Support more than one path parameters with a single `By`, when the `By` keyword is the last word and the func's input arguments are more than one i.e `GetBy(name string, age int)`, note that you can still use the older way of doing this; `GetByBy(string, int)`. It's an enhancement of the https://github.com/kataras/iris/issues/751  feature request.
+- Badger team added support for transactions [yesterday](https://github.com/dgraph-io/badger/commit/06242925c2f2a5e73dc688e9049004029dd7f9f7), therefore the [badger session database](sessions/sessiondb/badger) is updated via https://github.com/jukree/iris/commit/0b48927562a2202809a7674ebedb738dc3da57e8.
+- MVC: Support more than one path parameters with a single `By`, when the `By` keyword is the last word and the func's input arguments are more than one i.e `GetBy(name string, age int)`, note that you can still use the older way of doing this; `GetByBy(string, int)`. It's an enhancement of the https://github.com/jukree/iris/issues/751  feature request.
 - MVC: Give controllers the ability to auto-initialize themselves by  `OnActivate` func derives from the new [ActivateListener](mvc/activator/activate_listener.go) interface, this can be used to perform any custom actions when the app registers the supported Controllers. See [mvc/session_controller.go](mvc/session_controller.go) for a good use case.
 - errors.Reporter.AddErr returns true if the error is added to the stack, otherwise false.
-- @ZaniaDeveloper fixed https://github.com/kataras/iris/issues/778 with PR: https://github.com/kataras/iris/pull/779.
-- Add `StatusSeeOther` at [mvc login example](https://github.com/kataras/iris/blob/master/_examples/mvc/login/user/controller.go#L53) for Redirection, reported by @motecshine at https://github.com/kataras/iris/issues/777.
+- @ZaniaDeveloper fixed https://github.com/jukree/iris/issues/778 with PR: https://github.com/jukree/iris/pull/779.
+- Add `StatusSeeOther` at [mvc login example](https://github.com/jukree/iris/blob/master/_examples/mvc/login/user/controller.go#L53) for Redirection, reported by @motecshine at https://github.com/jukree/iris/issues/777.
 - Fix `DisableVersionChecker` configuration field is not being passed correctly when it was true via `iris.Run(..., iris.WithConfiguration{DisableVersionChecker:true, ...})` call.
 
 # Su, 01 October 2017 | v8.4.4
 
-- Fix https://github.com/kataras/iris/issues/762 reported by @xkylsoft
-- Fix https://github.com/kataras/iris/issues/771 reported by @cdren
-- Improvements to the memstore's `GetInt`, `GetInt64`, `GetFloat64`, `GetBool` and remove the `golang/net/context`'s interface completion from Context, read the [changes](https://github.com/kataras/iris/commit/caff55748eca4ecb4aa5a770995265b9b3aee544) for more
-- Add two examples for folder structuring as requested at https://github.com/kataras/iris/issues/748
+- Fix https://github.com/jukree/iris/issues/762 reported by @xkylsoft
+- Fix https://github.com/jukree/iris/issues/771 reported by @cdren
+- Improvements to the memstore's `GetInt`, `GetInt64`, `GetFloat64`, `GetBool` and remove the `golang/net/context`'s interface completion from Context, read the [changes](https://github.com/jukree/iris/commit/caff55748eca4ecb4aa5a770995265b9b3aee544) for more
+- Add two examples for folder structuring as requested at https://github.com/jukree/iris/issues/748
 	* [Example 1](_examples/mvc/login)
 	* [Example 2](_examples/structuring/mvc)
 - Add node.js express [benchmarks](_benchmarks) similar to iris and netcore
 
 # We, 27 September 2017 | v8.4.3
 
-- MVC: Support for `ByBy` syntax as requested at https://github.com/kataras/iris/issues/751
-- Fix https://github.com/kataras/iris/issues/760
-- @itcrow fixed https://github.com/kataras/iris/issues/757 with PR: https://github.com/kataras/iris/pull/758
-- @balthild fixed https://github.com/kataras/iris/issues/764 with PR: https://github.com/kataras/iris/pull/765
-- Add a new session database(back-end storage) supported by the [badger](github.com/dgraph-io/badger) key-value file-based storage, example [here](https://github.com/kataras/iris/commit/204f8474687bad1178d5108b501c6f0c7d927b9a#diff-26d58a00b7f90165fb32043676ed17a5)
+- MVC: Support for `ByBy` syntax as requested at https://github.com/jukree/iris/issues/751
+- Fix https://github.com/jukree/iris/issues/760
+- @itcrow fixed https://github.com/jukree/iris/issues/757 with PR: https://github.com/jukree/iris/pull/758
+- @balthild fixed https://github.com/jukree/iris/issues/764 with PR: https://github.com/jukree/iris/pull/765
+- Add a new session database(back-end storage) supported by the [badger](github.com/dgraph-io/badger) key-value file-based storage, example [here](https://github.com/jukree/iris/commit/204f8474687bad1178d5108b501c6f0c7d927b9a#diff-26d58a00b7f90165fb32043676ed17a5)
 
 # Fr, 15 September 2017 | v8.4.2
 
@@ -289,7 +289,7 @@ Support more than one dynamic method function receivers.
 ```go
 package main
 
-import "github.com/kataras/iris"
+import "github.com/jukree/iris"
 
 func main() {
     app := iris.New()
@@ -394,10 +394,10 @@ func (c *Controller) GetBy(is bool) { // <--
 ## Miscellaneous
 
 - Update `vendor blackfriday` package to its latest version, 2.0.0
-- Update [documentation](https://godoc.org/github.com/kataras/iris) for go 1.9
+- Update [documentation](https://godoc.org/github.com/jukree/iris) for go 1.9
 - Update [_examples](_examples) folder for go 1.9
 - Update examples inside https://github.com/iris-contrib/middleware for go 1.9
-- Update https://github.com/kataras/iris-contrib/examples for go 1.9
+- Update https://github.com/jukree/iris-contrib/examples for go 1.9
 - Update https://iris-go.com/v8/recipe for go 1.9
 
 ## Router
@@ -415,7 +415,7 @@ app.Get("/user/{id:long}", func(ctx context.Context) {
 The ability to pre-calculate, register and map different (relative) paths inside a single controller
 with zero performance cost.
 
-Meaning that after a `go get -u github.com/kataras/iris` you will be able to use things like these:
+Meaning that after a `go get -u github.com/jukree/iris` you will be able to use things like these:
 
 If `app.Controller("/user", new(user.Controller))`
 
@@ -439,7 +439,7 @@ If `app.Controller("/assets", new(file.Controller))`
 
 **Example** can be found at: [_examples/mvc/login/user/controller.go](_examples/mvc/login/user/controller.go).
 
-## Pretty [awesome](https://github.com/kataras/iris/stargazers), right?
+## Pretty [awesome](https://github.com/jukree/iris/stargazers), right?
 
 # We, 23 August 2017 | v8.3.4
 
@@ -503,7 +503,7 @@ My personal advice to you is to always organize and split your code nicely and w
 
 I'm aware that this is not always an easy task to do, therefore is here if you ever need it :)
 
-A ridiculous simple example of this feature can be found at the [mvc/controller_test.go](https://github.com/kataras/iris/blob/master/mvc/controller_test.go#L424) file.
+A ridiculous simple example of this feature can be found at the [mvc/controller_test.go](https://github.com/jukree/iris/blob/master/mvc/controller_test.go#L424) file.
 
 
 # Tu, 22 August 2017 | v8.3.2
@@ -534,14 +534,14 @@ app.Controller(new(ProfileController), checkLogin)
 // [...]
 ```
 
-Usage of these kind of MVC features could be found at the [mvc/controller_test.go](https://github.com/kataras/iris/blob/master/mvc/controller_test.go#L174) file.
+Usage of these kind of MVC features could be found at the [mvc/controller_test.go](https://github.com/jukree/iris/blob/master/mvc/controller_test.go#L174) file.
 
 ### Other minor enhancements
 
-- fix issue [#726](https://github.com/kataras/iris/issues/726)[*](https://github.com/kataras/iris/commit/5e435fc54fe3dbf95308327c2180d1b444ef7e0d)
-- fix redis sessiondb expiration[*](https://github.com/kataras/iris/commit/85cfc91544c981e87e09c5aa86bad4b85d0b96d3)
-- update recursively when new version is available[*](https://github.com/kataras/iris/commit/cd3c223536c6a33653a7fcf1f0648123f2b968fd)
-- some minor session enhancements[*](https://github.com/kataras/iris/commit/2830f3b50ee9c526ac792c3ce1ec1c08c24ea024)
+- fix issue [#726](https://github.com/jukree/iris/issues/726)[*](https://github.com/jukree/iris/commit/5e435fc54fe3dbf95308327c2180d1b444ef7e0d)
+- fix redis sessiondb expiration[*](https://github.com/jukree/iris/commit/85cfc91544c981e87e09c5aa86bad4b85d0b96d3)
+- update recursively when new version is available[*](https://github.com/jukree/iris/commit/cd3c223536c6a33653a7fcf1f0648123f2b968fd)
+- some minor session enhancements[*](https://github.com/jukree/iris/commit/2830f3b50ee9c526ac792c3ce1ec1c08c24ea024)
 
 
 # Sa, 19 August 2017 | v8.3.1
@@ -576,14 +576,14 @@ People who used the mvc from its baby steps(v8.2.5) the only syntactic change yo
 
 Before: 
 ```go
-import "github.com/kataras/iris/core/router"
+import "github.com/jukree/iris/core/router"
 type MyController struct {
     router.Controller
 }
 ```
 Now:
 ```go
-import "github.com/kataras/iris/mvc"
+import "github.com/jukree/iris/mvc"
 type MyController struct {
     mvc.Controller
     // if you build with go1.9 you can omit the import of mvc package
@@ -608,8 +608,8 @@ package main
 import (
 	"sync"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/mvc"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/mvc"
 )
 
 func main() {
@@ -762,7 +762,7 @@ useful to call middlewares or when many methods use the same collection of data.
 Optional `EndRequest(ctx)` function to perform any finalization after any method executed.
 
 Inheritance, recursively, see for example our `mvc.SessionController`, it has the `mvc.Controller` as an embedded field
-and it adds its logic to its `BeginRequest`, [here](https://github.com/kataras/iris/blob/master/mvc/session_controller.go). 
+and it adds its logic to its `BeginRequest`, [here](https://github.com/jukree/iris/blob/master/mvc/session_controller.go). 
 
 Read access to the current route  via the `Route` field.
 
@@ -775,11 +775,11 @@ If you're new to back-end web development read about the MVC architectural patte
 
 Follow the examples below,
 
-https://github.com/kataras/iris/tree/master/_examples/#mvc
+https://github.com/jukree/iris/tree/master/_examples/#mvc
 
 ### Bugs
 
-Fix [#723](https://github.com/kataras/iris/issues/723) reported by @speedwheel.
+Fix [#723](https://github.com/jukree/iris/issues/723) reported by @speedwheel.
 
 
 # Mo, 14 August 2017 | v8.2.6
@@ -832,7 +832,7 @@ Example Code:
 package main
 
 import (
-    "github.com/kataras/iris"
+    "github.com/jukree/iris"
 
     "controllers"
 )
@@ -855,7 +855,7 @@ func main() {
 package controllers
 
 import (
-    "github.com/kataras/iris/core/router"
+    "github.com/jukree/iris/core/router"
 )
 
 // Index is our index example controller.
@@ -887,13 +887,13 @@ A full example can be found at the [_examples/mvc](_examples/mvc) folder.
 
 No API Changes.
 
-Fix https://github.com/kataras/iris/issues/717, users are welcomed to follow the thread for any questions or reports about Gzip and Static Files Handlers **only**.
+Fix https://github.com/jukree/iris/issues/717, users are welcomed to follow the thread for any questions or reports about Gzip and Static Files Handlers **only**.
 
 # Th, 10 August 2017 | v8.2.3
 
 No API Changes.
 
-Fix https://github.com/kataras/iris/issues/714
+Fix https://github.com/jukree/iris/issues/714
 
 Continue to v8.2.2 for more...
 
@@ -997,18 +997,18 @@ All sessions databases are updated and they performant even faster than before.
 - **NEW** [boltdb-based](https://github.com/boltdb/bolt) session database implemented, example [here](_examples/sessions/database/boltdb) (recommended as it's safer and faster)
 - [redis sessiondb](_examples/sessions/database/redis) updated to the latest api
 
-Under the cover, session database works entirely differently than before but nothing changed from the user's perspective, so upgrade with `go get -u github.com/kataras/iris` and sleep well.
+Under the cover, session database works entirely differently than before but nothing changed from the user's perspective, so upgrade with `go get -u github.com/jukree/iris` and sleep well.
 
 # Tu, 01 August 2017 | v8.1.3
 
-- Add `Option` function to the `html view engine`: https://github.com/kataras/iris/issues/694
-- Fix sessions backend databases restore expiration: https://github.com/kataras/iris/issues/692 by @corebreaker
+- Add `Option` function to the `html view engine`: https://github.com/jukree/iris/issues/694
+- Fix sessions backend databases restore expiration: https://github.com/jukree/iris/issues/692 by @corebreaker
 - Add `PartyFunc`, same as `Party` but receives a function with the sub router as its argument instead [GO1.9 Users-ONLY]
 
 # Mo, 31 July 2017 | v8.1.2
 
 Add a `ConfigureHost` function as an alternative way to customize the hosts via `host.Configurator`.
-The first way was to pass `host.Configurator` as optional arguments on `iris.Runner`s built'n functions (`iris#Server, iris#Listener, iris#Addr, iris#TLS, iris#AutoTLS`), example of this can be found [there](https://github.com/kataras/iris/blob/master/_examples/http-listening/notify-on-shutdown).
+The first way was to pass `host.Configurator` as optional arguments on `iris.Runner`s built'n functions (`iris#Server, iris#Listener, iris#Addr, iris#TLS, iris#AutoTLS`), example of this can be found [there](https://github.com/jukree/iris/blob/master/_examples/http-listening/notify-on-shutdown).
 
 Example Code:
 
@@ -1019,9 +1019,9 @@ import (
 	stdContext "context"
 	"time"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/core/host"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/core/host"
 )
 
 func main() {
@@ -1067,13 +1067,13 @@ func configureHost(su *host.Supervisor) {
 
 Greetings my friends, nothing special today, no version number yet.
 
-We just improve the, external, Iris Logging library and the `Columns` config field from `middleware/logger` defaults to `false` now. Upgrade with `go get -u github.com/kataras/iris` and have fun!
+We just improve the, external, Iris Logging library and the `Columns` config field from `middleware/logger` defaults to `false` now. Upgrade with `go get -u github.com/jukree/iris` and have fun!
 
 # Sa, 29 July 2017 | v8.1.1
 
 No breaking changes, just an addition to make your life easier.
 
-This feature has been implemented after @corebreaker 's request, posted at: https://github.com/kataras/iris/issues/688. He was also tried to fix that by a [PR](https://github.com/kataras/iris/pull/689), we thanks him but the problem with that PR was the duplication and the separation of concepts, however we thanks him for pushing for a solution. The current feature's implementation gives a permant solution to host supervisor access issues.
+This feature has been implemented after @corebreaker 's request, posted at: https://github.com/jukree/iris/issues/688. He was also tried to fix that by a [PR](https://github.com/jukree/iris/pull/689), we thanks him but the problem with that PR was the duplication and the separation of concepts, however we thanks him for pushing for a solution. The current feature's implementation gives a permant solution to host supervisor access issues.
 
 Optional host configurators added to all common serve and listen functions.
 
@@ -1106,7 +1106,7 @@ app.Run(iris.Raw(h.ListenAndServe))
 Second, and probably easier way is to use the `host.Configurator`.
 
 Note that this method requires an extra import statement of
-"github.com/kataras/iris/core/host" when using go < 1.9,
+"github.com/jukree/iris/core/host" when using go < 1.9,
 if you're targeting on go1.9 then you can use the `iris#Supervisor`
 and omit the extra host import.
 
@@ -1124,9 +1124,9 @@ import (
     stdContext "context"
     "time"
 
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/context"
-    "github.com/kataras/iris/core/host"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/context"
+    "github.com/jukree/iris/core/host"
 )
 
 func main() {
@@ -1171,11 +1171,11 @@ func configureHost(su *host.Supervisor) {
 }
 ```
 
-Read more about listening and gracefully shutdown by navigating to: https://github.com/kataras/iris/tree/master/_examples/#http-listening
+Read more about listening and gracefully shutdown by navigating to: https://github.com/jukree/iris/tree/master/_examples/#http-listening
 
 # We, 26 July 2017 | v8.1.0
 
-The `app.Logger() *logrus.Logger` was replaced with a custom implementation [[golog](https://github.com/kataras/golog)], it's compatible with the [logrus](https://github.com/sirupsen/logrus) package and other open-source golang loggers as well, because of that: https://github.com/kataras/iris/issues/680#issuecomment-316184570. 
+The `app.Logger() *logrus.Logger` was replaced with a custom implementation [[golog](https://github.com/kataras/golog)], it's compatible with the [logrus](https://github.com/sirupsen/logrus) package and other open-source golang loggers as well, because of that: https://github.com/jukree/iris/issues/680#issuecomment-316184570. 
 
 The API didn't change much except these:
 
@@ -1192,7 +1192,7 @@ I understand that many of you may use logrus outside of Iris too. To integrate a
 
 ```go
 import (
-    "github.com/kataras/iris"
+    "github.com/jukree/iris"
     "github.com/sirupsen/logrus"
 )
 
@@ -1207,7 +1207,7 @@ For more information about our new logger please navigate to: https://github.com
 
 # Sa, 23 July 2017 | v8.0.7
 
-Fix [It's true that with UseGlobal the "/path1.txt" route call the middleware but cause the prepend, the order is inversed](https://github.com/kataras/iris/issues/683#issuecomment-317229068)
+Fix [It's true that with UseGlobal the "/path1.txt" route call the middleware but cause the prepend, the order is inversed](https://github.com/jukree/iris/issues/683#issuecomment-317229068)
 
 # Sa, 22 July 2017 | v8.0.5 & v8.0.6
 
@@ -1215,7 +1215,7 @@ No API Changes.
 
 ### Performance
 
-Add an experimental [Configuration#EnableOptimizations](https://github.com/kataras/iris/blob/master/configuration.go#L170) option.
+Add an experimental [Configuration#EnableOptimizations](https://github.com/jukree/iris/blob/master/configuration.go#L170) option.
 
 ```go
 type Configuration {
@@ -1239,17 +1239,17 @@ app.Run(iris.Addr(":8080"), iris.WithOptimizations)
 
 ### Django view engine
 
-@corebreaker pushed a [PR](https://github.com/kataras/iris/pull/682) to solve the [Problem for {%extends%} in Django Engine with embedded files](https://github.com/kataras/iris/issues/681).
+@corebreaker pushed a [PR](https://github.com/jukree/iris/pull/682) to solve the [Problem for {%extends%} in Django Engine with embedded files](https://github.com/jukree/iris/issues/681).
 
 ### Logger
 
-Remove the `vendor/github.com/sirupsen/logrus` folder, as a temporary solution for the https://github.com/kataras/iris/issues/680#issuecomment-316196126.
+Remove the `vendor/github.com/sirupsen/logrus` folder, as a temporary solution for the https://github.com/jukree/iris/issues/680#issuecomment-316196126.
 
 #### Future versions
 
-The logrus will be replaced with a custom implementation, because of that: https://github.com/kataras/iris/issues/680#issuecomment-316184570. 
+The logrus will be replaced with a custom implementation, because of that: https://github.com/jukree/iris/issues/680#issuecomment-316184570. 
 
-As far as we know, @kataras is working on this new implementation, see [here](https://github.com/kataras/iris/issues/680#issuecomment-316544906), 
+As far as we know, @kataras is working on this new implementation, see [here](https://github.com/jukree/iris/issues/680#issuecomment-316544906), 
 which will be compatible with the logrus package and other open-source golang loggers as well.
 
 
@@ -1260,11 +1260,11 @@ No API changes.
 ### HTTP Errors
 
 Fix a rare behavior: error handlers are not executed correctly
-when a before-handler by-passes the order of execution, relative to the [previous feature](https://github.com/kataras/iris/blob/master/HISTORY.md#su-16-july-2017--v803). 
+when a before-handler by-passes the order of execution, relative to the [previous feature](https://github.com/jukree/iris/blob/master/HISTORY.md#su-16-july-2017--v803). 
 
 ### Request Logger
 
-Add `Configuration#MessageContextKey`. Example can be found at [_examples/http_request/request-logger/main.go](https://github.com/kataras/iris/blob/master/_examples/http_request/request-logger/main.go#L48).
+Add `Configuration#MessageContextKey`. Example can be found at [_examples/http_request/request-logger/main.go](https://github.com/jukree/iris/blob/master/_examples/http_request/request-logger/main.go#L48).
 
 # Su, 16 July 2017 | v8.0.3
 
@@ -1272,23 +1272,23 @@ No API changes.
 
 Relative issues: 
 
-- https://github.com/kataras/iris/issues/674
-- https://github.com/kataras/iris/issues/675
-- https://github.com/kataras/iris/issues/676
+- https://github.com/jukree/iris/issues/674
+- https://github.com/jukree/iris/issues/675
+- https://github.com/jukree/iris/issues/676
 
 ### HTTP Errors
 
-Able to register a chain of Handlers (and middleware with `ctx.Next()` support like routes) for a specific error code, read more at [issues/674](https://github.com/kataras/iris/issues/674). Usage example can be found at [_examples/http_request/request-logger/main.go](https://github.com/kataras/iris/blob/master/_examples/http_request/request-logger/main.go#L41).
+Able to register a chain of Handlers (and middleware with `ctx.Next()` support like routes) for a specific error code, read more at [issues/674](https://github.com/jukree/iris/issues/674). Usage example can be found at [_examples/http_request/request-logger/main.go](https://github.com/jukree/iris/blob/master/_examples/http_request/request-logger/main.go#L41).
 
 
-New function to register a Handler or a chain of Handlers for all official http error codes, by calling the new `app.OnAnyErrorCode(func(ctx context.Context){})`, read more at [issues/675](https://github.com/kataras/iris/issues/675). Usage example can be found at [_examples/http_request/request-logger/main.go](https://github.com/kataras/iris/blob/master/_examples/http_request/request-logger/main.go#L42).
+New function to register a Handler or a chain of Handlers for all official http error codes, by calling the new `app.OnAnyErrorCode(func(ctx context.Context){})`, read more at [issues/675](https://github.com/jukree/iris/issues/675). Usage example can be found at [_examples/http_request/request-logger/main.go](https://github.com/jukree/iris/blob/master/_examples/http_request/request-logger/main.go#L42).
 
 ### Request Logger
 
-Add `Configuration#LogFunc` and `Configuration#Columns` fields, read more at [issues/676](https://github.com/kataras/iris/issues/676). Example can be found at [_examples/http_request/request-logger/request-logger-file/main.go](https://github.com/kataras/iris/blob/master/_examples/http_request/request-logger/request-logger-file/main.go).
+Add `Configuration#LogFunc` and `Configuration#Columns` fields, read more at [issues/676](https://github.com/jukree/iris/issues/676). Example can be found at [_examples/http_request/request-logger/request-logger-file/main.go](https://github.com/jukree/iris/blob/master/_examples/http_request/request-logger/request-logger-file/main.go).
 
 
-Have fun and don't forget to [star](https://github.com/kataras/iris/stargazers) the github repository, it gives me power to continue publishing my work!
+Have fun and don't forget to [star](https://github.com/jukree/iris/stargazers) the github repository, it gives me power to continue publishing my work!
 
 # Sa, 15 July 2017 | v8.0.2
 
@@ -1309,8 +1309,8 @@ Or even like this:
 package main
 
 import (
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/context"
 )
 
 func main() {
@@ -1371,7 +1371,7 @@ func staticPath(ctx context.Context) {
 
 If you find any bugs with this change please send me a [chat message](https://kataras.rocket.chat/channel/iris) in order to investigate it, I'm totally free at weekends.
 
-Have fun and don't forget to [star](https://github.com/kataras/iris/stargazers) the github repository, it gives me power to continue publishing my work!
+Have fun and don't forget to [star](https://github.com/jukree/iris/stargazers) the github repository, it gives me power to continue publishing my work!
 
 # Th, 13 July 2017 | v8.0.1
 
@@ -1379,7 +1379,7 @@ Nothing tremendous at this minor version.
 
 We've just added a configuration field in order to ignore errors received by the `Run` function, see below.
 
-[Configuration#IgnoreServerErrors](https://github.com/kataras/iris/blob/master/configuration.go#L255)
+[Configuration#IgnoreServerErrors](https://github.com/jukree/iris/blob/master/configuration.go#L255)
 ```go
 type Configuration struct {
     // [...]
@@ -1398,7 +1398,7 @@ type Configuration struct {
     // [...]
 }
 ```
-[Configuration#WithoutServerError](https://github.com/kataras/iris/blob/master/configuration.go#L106)
+[Configuration#WithoutServerError](https://github.com/jukree/iris/blob/master/configuration.go#L106)
 ```go
 // WithoutServerError will cause to ignore the matched "errors"
 // from the main application's `Run` function.
@@ -1414,13 +1414,13 @@ WithoutServerError(errors ...error) Configurator
 By default no error is being ignored, of course.
 
 Example code:
-[_examples/http-listening/listen-addr/omit-server-errors](https://github.com/kataras/iris/tree/master/_examples/http-listening/listen-addr/omit-server-errors)
+[_examples/http-listening/listen-addr/omit-server-errors](https://github.com/jukree/iris/tree/master/_examples/http-listening/listen-addr/omit-server-errors)
 ```go
 package main
 
 import (
-    "github.com/kataras/iris"
-    "github.com/kataras/iris/context"
+    "github.com/jukree/iris"
+    "github.com/jukree/iris/context"
 )
 
 func main() {
@@ -1447,7 +1447,7 @@ that many applications are based on configuration, therefore it would be nice to
 by simply string values that can be passed to the application's configuration via `toml` or `yaml` files too.
 
 This feature has been implemented after a request of ignoring the `iris/http#ErrServerClosed` from the `Run` function: 
-https://github.com/kataras/iris/issues/668
+https://github.com/jukree/iris/issues/668
 
 # Mo, 10 July 2017 | v8.0.0
 
@@ -1499,7 +1499,7 @@ Remove `ctx.Session()` and `app.AttachSessionManager`, devs should import and us
 
 ### Websockets
 
-The `github.com/kataras/iris/websocket` package does not handle the endpoint and client side automatically anymore. Example code:
+The `github.com/jukree/iris/websocket` package does not handle the endpoint and client side automatically anymore. Example code:
 
 ```go
 func setupWebsocket(app *iris.Application) {
@@ -1527,8 +1527,8 @@ func setupWebsocket(app *iris.Application) {
 
 Rename `app.AttachView(...)` to `app.RegisterView(...)`.
 
-Users can omit the import of `github.com/kataras/iris/view` and use the `github.com/kataras/iris` package to
-refer to the view engines, i.e: `app.RegisterView(iris.HTML("./templates", ".html"))` is the same as `import "github.com/kataras/iris/view" [...] app.RegisterView(view.HTML("./templates" ,".html"))`.
+Users can omit the import of `github.com/jukree/iris/view` and use the `github.com/jukree/iris` package to
+refer to the view engines, i.e: `app.RegisterView(iris.HTML("./templates", ".html"))` is the same as `import "github.com/jukree/iris/view" [...] app.RegisterView(view.HTML("./templates" ,".html"))`.
 
 > Examples [here](_examples/#view)
 
@@ -1603,7 +1603,7 @@ The amount of the next two or three donations you'll send they will be immediate
 
 Declare the `iris.Cache alias` to the new, improved and most-suited for common usage, `cache.Handler function`.
 
-`iris.Cache` be used as middleware in the chain now, example [here](_examples/intermediate/cache-markdown/main.go). However [you can still use the cache as a wrapper](cache/cache_test.go) by importing the `github.com/kataras/iris/cache` package. 
+`iris.Cache` be used as middleware in the chain now, example [here](_examples/intermediate/cache-markdown/main.go). However [you can still use the cache as a wrapper](cache/cache_test.go) by importing the `github.com/jukree/iris/cache` package. 
 
 
 ### File server
@@ -1670,11 +1670,11 @@ Iris now supports static paths and dynamic paths for the same path prefix with z
 
 The rest of the special Iris' routing features, including static & wildcard subdomains are still work like a charm.
 
-> This was one of the most popular community's feature requests. Click [here](https://github.com/kataras/iris/blob/master/_examples/beginner/routing/overview/main.go) to see a trivial example.
+> This was one of the most popular community's feature requests. Click [here](https://github.com/jukree/iris/blob/master/_examples/beginner/routing/overview/main.go) to see a trivial example.
 
 # Sa, 10 June 2017 | v7.0.4
 
-- Simplify and add a test for the [basicauth middleware](https://github.com/kataras/iris/tree/master/middleware/basicauth), no need to be
+- Simplify and add a test for the [basicauth middleware](https://github.com/jukree/iris/tree/master/middleware/basicauth), no need to be
 stored inside the Context anymore, developers can get the validated user(username and password) via `context.Request().BasicAuth()`. `basicauth.Config.ContextKey` was removed, just remove that field from your configuration, it's useless now. 
 
 # Sa, 10 June 2017 | v7.0.3
@@ -1700,15 +1700,15 @@ stored inside the Context anymore, developers can get the validated user(usernam
 
 # Sa, 03 June 2017 
 
-After 2+ months of hard work and collaborations, Iris [version 7](https://github.com/kataras/iris) was published earlier today.
+After 2+ months of hard work and collaborations, Iris [version 7](https://github.com/jukree/iris) was published earlier today.
 
-If you're new to Iris you don't have to read all these, just navigate to the [updated examples](https://github.com/kataras/iris/tree/master/_examples) and you should be fine:)
+If you're new to Iris you don't have to read all these, just navigate to the [updated examples](https://github.com/jukree/iris/tree/master/_examples) and you should be fine:)
 
 Note that this section will not
 cover the internal changes, the difference is so big that anybody can see them with a glimpse, even the code structure itself.
 
 
-## Changes from [v6](https://github.com/kataras/iris/tree/v6)
+## Changes from [v6](https://github.com/jukree/iris/tree/v6)
 
 The whole framework was re-written from zero but I tried to keep the most common public API that iris developers use.
 
@@ -1733,9 +1733,9 @@ I remember when Iris was in its alpha state and it had 4k stars on its first wee
 General
 
 - Several enhancements for the typescript transpiler, view engine, websocket server and sessions manager
-- All `Listen` methods replaced with a single `Run` method, see [here](https://github.com/kataras/iris/tree/master/_examples/beginner/listening)
-- Configuration, easier to modify the defaults, see [here](https://github.com/kataras/iris/tree/master/_examples/beginner/cofiguration)
-- `HandlerFunc` removed, just `Handler` of `func(context.Context)` where context.Context derives from `import "github.com/kataras/iris/context"` (**NEW**: this import path is optional, use `iris.Context` if you've installed Go 1.9)
+- All `Listen` methods replaced with a single `Run` method, see [here](https://github.com/jukree/iris/tree/master/_examples/beginner/listening)
+- Configuration, easier to modify the defaults, see [here](https://github.com/jukree/iris/tree/master/_examples/beginner/cofiguration)
+- `HandlerFunc` removed, just `Handler` of `func(context.Context)` where context.Context derives from `import "github.com/jukree/iris/context"` (**NEW**: this import path is optional, use `iris.Context` if you've installed Go 1.9)
     - Simplify API, i.e: instead of `Handle,HandleFunc,Use,UseFunc,Done,DoneFunc,UseGlobal,UseGlobalFunc` use `Handle,Use,Done,UseGlobal`.
 - Response time decreased even more (9-35%, depends on the application)
 - The `Adaptors` idea replaced with a more structural design pattern, but you have to apply these changes: 
@@ -1746,7 +1746,7 @@ General
 
 Routing
 - Remove of multiple routers, now we have the fresh Iris router which is based on top of the julien's [httprouter](https://github.com/julienschmidt/httprouter).
-    > Update 11 June 2017: As of 7.0.5 this is changed, read [here](https://github.com/kataras/iris/blob/master/HISTORY.md#su-11-june-2017--v705).
+    > Update 11 June 2017: As of 7.0.5 this is changed, read [here](https://github.com/jukree/iris/blob/master/HISTORY.md#su-11-june-2017--v705).
 - Subdomains routing algorithm has been improved.
 - Iris router is using a custom interpreter with parser and path evaluator to achieve the best expressiveness, with zero performance loss, you ever seen so far, i.e: 
     - `app.Get("/", "/users/{userid:int min(1)}", handler)`,
@@ -1758,7 +1758,7 @@ Routing
         - The previous syntax of `:param` and `*param` still working as expected. Previous rules for paths confliction remain as they were.
             - Also, path parameter names should be only alphabetical now, numbers and symbols are not allowed (for your own good, I have seen a lot the last year...).
 
-Click [here](https://github.com/kataras/iris/tree/master/_examples/beginner/routing) for details.
+Click [here](https://github.com/jukree/iris/tree/master/_examples/beginner/routing) for details.
 > It was my first attempt/experience on the interpreters field, so be good with it :)
 
 Context
@@ -1774,7 +1774,7 @@ Context
     - `context.StatusCode()` -> `context.GetStatusCode()`
     - `app.OnError` -> `app.OnErrorCode`
     - Errors per party are removed by-default, you can just use one global error handler with logic like "if path starts with 'prefix' fire this error handler, else...". 
-- Easy way to change Iris' default `Context` with a custom one, see [here](https://github.com/kataras/iris/tree/master/_examples/intermediate/custom-context)
+- Easy way to change Iris' default `Context` with a custom one, see [here](https://github.com/jukree/iris/tree/master/_examples/intermediate/custom-context)
 - `context.ResponseWriter().SetBeforeFlush(...)` works for Flush and HTTP/2 Push, respectfully
 - Several improvements under the `Request transactions` 
 - Remember that you had to set a status code on each of the render-relative methods? Now it's not required, it just renders
@@ -1786,7 +1786,7 @@ with the status code that user gave with `context.StatusCode` or with `200 OK`, 
 Server
 - Able to set custom underline *http.Server(s) with new Host (aka Server Supervisor) feature 
     - `Done` and `Err` channels to catch shutdown or any errors on custom hosts,
-    - Schedule custom tasks(with cancelation) when server is running, see [here](https://github.com/kataras/iris/tree/master/_examples/intermediate/graceful-shutdown)
+    - Schedule custom tasks(with cancelation) when server is running, see [here](https://github.com/jukree/iris/tree/master/_examples/intermediate/graceful-shutdown)
 - Interrupt handler task for gracefully shutdown (when `CTRL/CMD+C`) are enabled by-default, you can disable its via configuration: `app.Run(iris.Addr(":8080"), iris.WithoutInterruptHandler)`
 
 Future plans

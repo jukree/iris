@@ -3,10 +3,10 @@ package main
 import (
 	"time"
 
-	"github.com/kataras/iris/_examples/structuring/login-mvc-single-responsibility-package/user"
+	"github.com/jukree/iris/_examples/structuring/login-mvc-single-responsibility-package/user"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/sessions"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/sessions"
 )
 
 func main() {

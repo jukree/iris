@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/kataras/iris/httptest"
+	"github.com/jukree/iris/httptest"
 )
 
 // $ go test -v

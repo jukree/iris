@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/kataras/iris/core/netutil"
+	"github.com/jukree/iris/core/netutil"
 )
 
 const host = "http://live.iris-go.com"

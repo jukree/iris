@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/core/memstore"
-	"github.com/kataras/iris/mvc/activator"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/core/memstore"
+	"github.com/jukree/iris/mvc/activator"
 )
 
 // C is the lightweight BaseController type as an alternative of the `Controller` struct type.
@@ -34,8 +34,8 @@ import (
 //
 // It completes the `activator.BaseController` interface.
 //
-// Example at: https://github.com/kataras/iris/tree/master/_examples/mvc/overview/web/controllers.
-// Example usage at: https://github.com/kataras/iris/blob/master/mvc/method_result_test.go#L17.
+// Example at: https://github.com/jukree/iris/tree/master/_examples/mvc/overview/web/controllers.
+// Example usage at: https://github.com/jukree/iris/blob/master/mvc/method_result_test.go#L17.
 type C struct {
 	// The Name of the `C` controller.
 	Name string

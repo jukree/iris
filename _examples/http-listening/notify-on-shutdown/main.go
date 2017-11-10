@@ -4,8 +4,8 @@ import (
 	stdContext "context"
 	"time"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/core/host"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/core/host"
 )
 
 func main() {

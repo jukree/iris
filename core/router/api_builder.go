@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/core/errors"
-	"github.com/kataras/iris/core/router/macro"
-	"github.com/kataras/iris/mvc/activator"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/core/errors"
+	"github.com/jukree/iris/core/router/macro"
+	"github.com/jukree/iris/mvc/activator"
 )
 
 const (
@@ -315,7 +315,7 @@ func (api *APIBuilder) WildcardSubdomain(middleware ...context.Handler) Party {
 // Macros returns the macro map which is responsible
 // to register custom macro functions for all routes.
 //
-// Learn more at:  https://github.com/kataras/iris/tree/master/_examples/routing/dynamic-path
+// Learn more at:  https://github.com/jukree/iris/tree/master/_examples/routing/dynamic-path
 func (api *APIBuilder) Macros() *macro.Map {
 	return api.macros
 }
@@ -651,7 +651,7 @@ func (api *APIBuilder) StaticContent(reqPath string, cType string, content []byt
 // embedded into executable files.
 //
 //
-// Examples: https://github.com/kataras/iris/tree/master/_examples/file-server
+// Examples: https://github.com/jukree/iris/tree/master/_examples/file-server
 func (api *APIBuilder) StaticEmbeddedHandler(vdir string, assetFn func(name string) ([]byte, error), namesFn func() []string) context.Handler {
 	// Notes:
 	// This doesn't need to be APIBuilder's scope,
@@ -667,7 +667,7 @@ func (api *APIBuilder) StaticEmbeddedHandler(vdir string, assetFn func(name stri
 //
 // Returns the GET *Route.
 //
-// Examples: https://github.com/kataras/iris/tree/master/_examples/file-server
+// Examples: https://github.com/jukree/iris/tree/master/_examples/file-server
 func (api *APIBuilder) StaticEmbedded(requestPath string, vdir string, assetFn func(name string) ([]byte, error), namesFn func() []string) *Route {
 	fullpath := joinPath(api.relativePath, requestPath)
 	requestPath = joinPath(fullpath, WildcardParam("file"))

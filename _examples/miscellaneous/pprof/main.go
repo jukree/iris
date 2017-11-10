@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 
-	"github.com/kataras/iris/middleware/pprof"
+	"github.com/jukree/iris/middleware/pprof"
 )
 
 func main() {

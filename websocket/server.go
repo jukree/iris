@@ -3,7 +3,7 @@ package websocket
 import (
 	"sync"
 
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/context"
 
 	"github.com/gorilla/websocket"
 )
