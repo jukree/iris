@@ -5,11 +5,11 @@ package controllers
 import (
 	"errors"
 
-	"github.com/kataras/iris/_examples/mvc/overview/datamodels"
-	"github.com/kataras/iris/_examples/mvc/overview/services"
+	"github.com/jukree/iris/_examples/mvc/overview/datamodels"
+	"github.com/jukree/iris/_examples/mvc/overview/services"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/mvc"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/mvc"
 )
 
 // MovieController is our /movies controller.

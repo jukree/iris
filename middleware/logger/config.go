@@ -3,7 +3,7 @@ package logger
 import (
 	"time"
 
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/context"
 )
 
 // The SkipperFunc signature, used to serve the main request without logs.

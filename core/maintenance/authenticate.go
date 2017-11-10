@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"net/url"
 
-	"github.com/kataras/iris/core/maintenance/client"
-	"github.com/kataras/iris/core/maintenance/encoding"
+	"github.com/jukree/iris/core/maintenance/client"
+	"github.com/jukree/iris/core/maintenance/encoding"
 
 	"github.com/kataras/survey"
 )

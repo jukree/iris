@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 )
 
 func main() {

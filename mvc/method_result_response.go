@@ -1,8 +1,8 @@
 package mvc
 
 import (
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/mvc/activator/methodfunc"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/mvc/activator/methodfunc"
 )
 
 // Response completes the `methodfunc.Result` interface.

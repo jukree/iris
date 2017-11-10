@@ -3,20 +3,20 @@
 ## How to upgrade
 
 ```sh
-go get -u github.com/kataras/iris
+go get -u github.com/jukree/iris
 ```
 
 ## Learning
 
 More than 50 practical examples, tutorials and articles at:
 
-- https://github.com/kataras/iris/tree/master/_examples
+- https://github.com/jukree/iris/tree/master/_examples
 - https://github.com/iris-contrib/examples
 - https://iris-go.com/v8/recipe
 - https://docs.iris-go.com (in-progress)
-- https://godoc.org/github.com/kataras/iris
+- https://godoc.org/github.com/jukree/iris
 
-> [Stay tuned](https://github.com/kataras/iris/stargazers), community prepares even more tutorials.
+> [Stay tuned](https://github.com/jukree/iris/stargazers), community prepares even more tutorials.
 
 Want to help and join to the greatest community? Describe your skills and push your own sections at: https://github.com/kataras/build-a-better-web-together/issues/new
 
@@ -26,7 +26,7 @@ Want to help and join to the greatest community? Describe your skills and push y
 
 | build error | reason | solution |
 | -----------|--------|--------|
-| `undefined iris.Context` | caused of using the **optional type alias** `iris.Context` instead of the `context.Context` when building with Go 1.8 | import the original package `github.com/kataras/iris/context` and declare as `func(context.Context){})` **or** download and install the [latest go version](https://golang.org/dl) _recommended_ |
+| `undefined iris.Context` | caused of using the **optional type alias** `iris.Context` instead of the `context.Context` when building with Go 1.8 | import the original package `github.com/jukree/iris/context` and declare as `func(context.Context){})` **or** download and install the [latest go version](https://golang.org/dl) _recommended_ |
 
 Type alias is a new feature, introduced at Go version 1.9, so if you want to use Iris' type aliases you have to build using the latest Go version. Nothing really changes for your application if you use type alias or not, Iris' type aliases helps you to omit import statements -- to reduce lines of code, nothing more.
 
@@ -36,16 +36,16 @@ Go version 1.9 introduced the [type alias](https://golang.org/doc/go1.9#language
 
 Iris uses the `type alias` feature to help you writing less code by omitting some package imports. The examples and documentation are written using Go 1.9 as well.
 
-If you build your Go app with Go 1.9 you can, optionally, use all Iris web framework's features by importing one single package, the `github.com/kataras/iris`.
+If you build your Go app with Go 1.9 you can, optionally, use all Iris web framework's features by importing one single package, the `github.com/jukree/iris`.
 
 Available type aliases;
 
 | Go 1.8 | Go 1.8 usage | Go 1.9 usage (optionally) |
 | -----------|--------|--------|
-| `import "github.com/kataras/iris/context"` | `func(context.Context) {}`, `context.Handler`, `context.Map` |  `func(iris.Context) {}`, `iris.Handler`,  `iris.Map` |
-| `import "github.com/kataras/iris/mvc"` | `type MyController struct { mvc.Controller }` , `mvc.SessionController` | `type MyController struct { iris.Controller }`, `iris.SessionController` |
-| `import "github.com/kataras/iris/core/router"` | `app.PartyFunc("/users", func(p router.Party) {})` |  `app.PartyFunc("/users", func(p iris.Party) {})` |
-| `import "github.com/kataras/iris/core/host"` | `app.ConfigureHost(func(s *host.Supervisor) {})` | `app.ConfigureHost(func(s *iris.Supervisor) {})` |
+| `import "github.com/jukree/iris/context"` | `func(context.Context) {}`, `context.Handler`, `context.Map` |  `func(iris.Context) {}`, `iris.Handler`,  `iris.Map` |
+| `import "github.com/jukree/iris/mvc"` | `type MyController struct { mvc.Controller }` , `mvc.SessionController` | `type MyController struct { iris.Controller }`, `iris.SessionController` |
+| `import "github.com/jukree/iris/core/router"` | `app.PartyFunc("/users", func(p router.Party) {})` |  `app.PartyFunc("/users", func(p iris.Party) {})` |
+| `import "github.com/jukree/iris/core/host"` | `app.ConfigureHost(func(s *host.Supervisor) {})` | `app.ConfigureHost(func(s *iris.Supervisor) {})` |
 
 You can find all type aliases and their original package import statements at the [./context.go file](context.go).
 
@@ -66,13 +66,13 @@ open for Iris-specific developers the time we speak.
 
 Yes, now more than ever.
 
-https://github.com/kataras/iris/issues/711
+https://github.com/jukree/iris/issues/711
 
 ## Do we have a community Chat?
 
 Yes, https://kataras.rocket.chat/channel/iris.
 
-https://github.com/kataras/iris/issues/646
+https://github.com/jukree/iris/issues/646
 
 ## How this open-source project still active and shine?
 

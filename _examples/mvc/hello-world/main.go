@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/mvc"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/mvc"
 	// auto-completion does not working well with type aliases
 	// when embedded fields.
 	// We should complete a report on golang repo for that at some point.
@@ -11,12 +11,12 @@ import (
 	// here at "hello-world" so users can see that
 	// import path somewhere else than the "FAQ" section.
 
-	"github.com/kataras/iris/middleware/logger"
-	"github.com/kataras/iris/middleware/recover"
+	"github.com/jukree/iris/middleware/logger"
+	"github.com/jukree/iris/middleware/recover"
 )
 
 // This example is equivalent to the
-// https://github.com/kataras/iris/blob/master/_examples/hello-world/main.go
+// https://github.com/jukree/iris/blob/master/_examples/hello-world/main.go
 //
 // It seems that additional code you
 // have to write doesn't worth it

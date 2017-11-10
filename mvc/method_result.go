@@ -1,8 +1,8 @@
 package mvc
 
 import (
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/mvc/activator/methodfunc"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/mvc/activator/methodfunc"
 )
 
 // build go1.9 only(go19.go)-->
@@ -19,7 +19,7 @@ import (
 // All types that complete this interface
 // can be returned as values from the method functions.
 //
-// Example at: https://github.com/kataras/iris/tree/master/_examples/mvc/overview.
+// Example at: https://github.com/jukree/iris/tree/master/_examples/mvc/overview.
 type Result interface { // NOTE: Should be always compatible with the methodfunc.Result.
 	// Dispatch should sends the response to the context's response writer.
 	Dispatch(ctx context.Context)
@@ -33,7 +33,7 @@ var defaultFailureResponse = Response{Code: methodfunc.DefaultErrStatusCode}
 // otherwise it returns the "failure" response if any,
 // if not then a 400 bad request is being sent.
 //
-// Example usage at: https://github.com/kataras/iris/blob/master/mvc/method_result_test.go.
+// Example usage at: https://github.com/jukree/iris/blob/master/mvc/method_result_test.go.
 func Try(fn func() Result, failure ...Result) Result {
 	var failed bool
 	var actionResponse Result

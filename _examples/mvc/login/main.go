@@ -5,13 +5,13 @@ package main
 import (
 	"time"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/_examples/mvc/login/datasource"
-	"github.com/kataras/iris/_examples/mvc/login/repositories"
-	"github.com/kataras/iris/_examples/mvc/login/services"
-	"github.com/kataras/iris/_examples/mvc/login/web/controllers"
-	"github.com/kataras/iris/_examples/mvc/login/web/middleware"
-	"github.com/kataras/iris/sessions"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/_examples/mvc/login/datasource"
+	"github.com/jukree/iris/_examples/mvc/login/repositories"
+	"github.com/jukree/iris/_examples/mvc/login/services"
+	"github.com/jukree/iris/_examples/mvc/login/web/controllers"
+	"github.com/jukree/iris/_examples/mvc/login/web/middleware"
+	"github.com/jukree/iris/sessions"
 )
 
 func main() {

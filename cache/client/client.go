@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/kataras/iris/cache/cfg"
-	"github.com/kataras/iris/cache/client/rule"
-	"github.com/kataras/iris/cache/uri"
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/cache/cfg"
+	"github.com/jukree/iris/cache/client/rule"
+	"github.com/jukree/iris/cache/uri"
+	"github.com/jukree/iris/context"
 )
 
 // ClientHandler is the client-side handler

@@ -3,8 +3,8 @@ package methodfunc
 import (
 	"reflect"
 
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/core/errors"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/core/errors"
 )
 
 // MethodFunc the handler function.

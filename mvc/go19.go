@@ -5,7 +5,7 @@ package mvc
 import (
 	"html/template"
 
-	"github.com/kataras/iris/mvc/activator"
+	"github.com/jukree/iris/mvc/activator"
 )
 
 type (

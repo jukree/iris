@@ -6,9 +6,9 @@ Example code:
 		 import (
 		 	"time"
 
-		 	"github.com/kataras/iris"
-		 	"github.com/kataras/iris/context"
-		 	"github.com/kataras/iris/cache"
+		 	"github.com/jukree/iris"
+		 	"github.com/jukree/iris/context"
+		 	"github.com/jukree/iris/cache"
 		 )
 
 		 func main(){
@@ -28,8 +28,8 @@ package cache
 import (
 	"time"
 
-	"github.com/kataras/iris/cache/client"
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/cache/client"
+	"github.com/jukree/iris/context"
 )
 
 // Cache accepts two parameters
@@ -69,7 +69,7 @@ func WrapHandler(bodyHandler context.Handler, expiration time.Duration) context.
 //
 // it returns a context.Handler which can be used as a middleware, for more options use the `Cache`.
 //
-// Examples can be found at: https://github.com/kataras/iris/tree/master/_examples/#caching
+// Examples can be found at: https://github.com/jukree/iris/tree/master/_examples/#caching
 func Handler(expiration time.Duration) context.Handler {
 	h := WrapHandler(nil, expiration)
 	return h

@@ -28,8 +28,8 @@ import (
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/russross/blackfriday"
 
-	"github.com/kataras/iris/core/errors"
-	"github.com/kataras/iris/core/memstore"
+	"github.com/jukree/iris/core/errors"
+	"github.com/jukree/iris/core/memstore"
 )
 
 type (
@@ -323,7 +323,7 @@ type Context interface {
 	// Translate is the i18n (localization) middleware's function,
 	// it calls the Get("translate") to return the translated value.
 	//
-	// Example: https://github.com/kataras/iris/tree/master/_examples/miscellaneous/i18n
+	// Example: https://github.com/jukree/iris/tree/master/_examples/miscellaneous/i18n
 	Translate(format string, args ...interface{}) string
 
 	//  +------------------------------------------------------------+
@@ -616,7 +616,7 @@ type Context interface {
 	//
 	// Look .ViewData and .View too.
 	//
-	// Example: https://github.com/kataras/iris/tree/master/_examples/view/context-view-data/
+	// Example: https://github.com/jukree/iris/tree/master/_examples/view/context-view-data/
 	ViewLayout(layoutTmplFile string)
 
 	// ViewData saves one or more key-value pair in order to be passed if and when .View
@@ -636,7 +636,7 @@ type Context interface {
 	//
 	// Look .ViewLayout and .View too.
 	//
-	// Example: https://github.com/kataras/iris/tree/master/_examples/view/context-view-data/
+	// Example: https://github.com/jukree/iris/tree/master/_examples/view/context-view-data/
 	ViewData(key string, value interface{})
 
 	// GetViewData returns the values registered by `context#ViewData`.
@@ -657,7 +657,7 @@ type Context interface {
 	//
 	// Look: .ViewData and .ViewLayout too.
 	//
-	// Examples: https://github.com/kataras/iris/tree/master/_examples/view/
+	// Examples: https://github.com/jukree/iris/tree/master/_examples/view/
 	View(filename string) error
 
 	// Binary writes out the raw bytes as binary data.
@@ -752,7 +752,7 @@ type Context interface {
 	// this transaction scope is only for context's response.
 	// Transactions have their own middleware ecosystem also, look iris.go:UseTransaction.
 	//
-	// See https://github.com/kataras/iris/tree/master/_examples/ for more
+	// See https://github.com/jukree/iris/tree/master/_examples/ for more
 	BeginTransaction(pipe func(t *Transaction))
 	// SkipTransactions if called then skip the rest of the transactions
 	// or all of them if called before the first transaction
@@ -776,7 +776,7 @@ type Context interface {
 	//
 	// app.None(...) and app.GetRoutes().Offline(route)/.Online(route, method)
 	//
-	// Example: https://github.com/kataras/iris/tree/master/_examples/routing/route-state
+	// Example: https://github.com/jukree/iris/tree/master/_examples/routing/route-state
 	//
 	// User can get the response by simple using rec := ctx.Recorder(); rec.Body()/rec.StatusCode()/rec.Header().
 	//
@@ -1135,7 +1135,7 @@ func (ctx *context) Values() *memstore.Store {
 // Translate is the i18n (localization) middleware's function,
 // it calls the Get("translate") to return the translated value.
 //
-// Example: https://github.com/kataras/iris/tree/master/_examples/miscellaneous/i18n
+// Example: https://github.com/jukree/iris/tree/master/_examples/miscellaneous/i18n
 func (ctx *context) Translate(format string, args ...interface{}) string {
 	if cb, ok := ctx.values.Get(ctx.Application().ConfigurationReadOnly().GetTranslateFunctionContextKey()).(func(format string, args ...interface{}) string); ok {
 		return cb(format, args...)
@@ -1958,7 +1958,7 @@ const (
 //
 // Look .ViewData and .View too.
 //
-// Example: https://github.com/kataras/iris/tree/master/_examples/view/context-view-data/
+// Example: https://github.com/jukree/iris/tree/master/_examples/view/context-view-data/
 func (ctx *context) ViewLayout(layoutTmplFile string) {
 	ctx.values.Set(ctx.Application().ConfigurationReadOnly().GetViewLayoutContextKey(), layoutTmplFile)
 }
@@ -1980,7 +1980,7 @@ func (ctx *context) ViewLayout(layoutTmplFile string) {
 //
 // Look .ViewLayout and .View too.
 //
-// Example: https://github.com/kataras/iris/tree/master/_examples/view/context-view-data/
+// Example: https://github.com/jukree/iris/tree/master/_examples/view/context-view-data/
 func (ctx *context) ViewData(key string, value interface{}) {
 	viewDataContextKey := ctx.Application().ConfigurationReadOnly().GetViewDataContextKey()
 	if key == "" {
@@ -2045,7 +2045,7 @@ func (ctx *context) GetViewData() map[string]interface{} {
 //
 // Look: .ViewData and .ViewLayout too.
 //
-// Examples: https://github.com/kataras/iris/tree/master/_examples/view/
+// Examples: https://github.com/jukree/iris/tree/master/_examples/view/
 func (ctx *context) View(filename string) error {
 	ctx.ContentType(ContentHTMLHeaderValue)
 	cfg := ctx.Application().ConfigurationReadOnly()
@@ -2576,7 +2576,7 @@ var errTransactionInterrupted = errors.New("transaction interrupted, recovery fr
 // this transaction scope is only for context's response.
 // Transactions have their own middleware ecosystem also, look iris.go:UseTransaction.
 //
-// See https://github.com/kataras/iris/tree/master/_examples/ for more
+// See https://github.com/jukree/iris/tree/master/_examples/ for more
 func (ctx *context) BeginTransaction(pipe func(t *Transaction)) {
 	// do NOT begin a transaction when the previous transaction has been failed
 	// and it was requested scoped or SkipTransactions called manually.
@@ -2642,7 +2642,7 @@ func (ctx *context) TransactionsSkipped() bool {
 //
 // app.None(...) and app.GetRoutes().Offline(route)/.Online(route, method)
 //
-// Example: https://github.com/kataras/iris/tree/master/_examples/routing/route-state
+// Example: https://github.com/jukree/iris/tree/master/_examples/routing/route-state
 //
 // User can get the response by simple using rec := ctx.Recorder(); rec.Body()/rec.StatusCode()/rec.Header().
 //

@@ -3,10 +3,10 @@ package main
 import (
 	"time"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 
-	"github.com/kataras/iris/sessions"
-	"github.com/kataras/iris/sessions/sessiondb/boltdb"
+	"github.com/jukree/iris/sessions"
+	"github.com/jukree/iris/sessions/sessiondb/boltdb"
 )
 
 func main() {

@@ -1,9 +1,9 @@
 package mvc
 
 import (
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/mvc/activator"
-	"github.com/kataras/iris/sessions"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/mvc/activator"
+	"github.com/jukree/iris/sessions"
 
 	"github.com/kataras/golog"
 )

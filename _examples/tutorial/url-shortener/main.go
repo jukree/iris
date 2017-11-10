@@ -4,7 +4,7 @@
 //
 // $ go get github.com/boltdb/bolt/...
 // $ go get github.com/satori/go.uuid
-// $ cd $GOPATH/src/github.com/kataras/iris/_examples/tutorial/url-shortener
+// $ cd $GOPATH/src/github.com/jukree/iris/_examples/tutorial/url-shortener
 // $ go build
 // $ ./url-shortener
 package main
@@ -12,7 +12,7 @@ package main
 import (
 	"html/template"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 )
 
 func main() {

@@ -5,8 +5,8 @@ import (
 	"runtime"
 
 	"github.com/kataras/golog"
-	"github.com/kataras/iris/core/errors"
-	"github.com/kataras/iris/sessions"
+	"github.com/jukree/iris/core/errors"
+	"github.com/jukree/iris/sessions"
 
 	"github.com/dgraph-io/badger"
 )

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/context"
 )
 
 // A Sessions manager should be responsible to Start a sesion, based

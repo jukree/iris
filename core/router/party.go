@@ -1,8 +1,8 @@
 package router
 
 import (
-	"github.com/kataras/iris/context"
-	"github.com/kataras/iris/mvc/activator"
+	"github.com/jukree/iris/context"
+	"github.com/jukree/iris/mvc/activator"
 )
 
 // Party is here to separate the concept of
@@ -217,7 +217,7 @@ type Party interface {
 	//
 	// Returns the GET *Route.
 	//
-	// Example: https://github.com/kataras/iris/tree/master/_examples/file-server/embedding-files-into-app
+	// Example: https://github.com/jukree/iris/tree/master/_examples/file-server/embedding-files-into-app
 	StaticEmbedded(requestPath string, vdir string, assetFn func(name string) ([]byte, error), namesFn func() []string) *Route
 
 	// Favicon serves static favicon

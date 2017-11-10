@@ -31,7 +31,7 @@ Package iris provides a beautifully expressive and easy to use foundation for yo
 
 Source code and other details for the project are available at GitHub:
 
-   https://github.com/kataras/iris
+   https://github.com/jukree/iris
 
 Current Version
 
@@ -41,7 +41,7 @@ Installation
 
 The only requirement is the Go Programming Language, at least version 1.8 but 1.9 is highly recommended.
 
-    $ go get -u github.com/kataras/iris
+    $ go get -u github.com/jukree/iris
 
 
 Example code:
@@ -49,7 +49,7 @@ Example code:
 
     package main
 
-    import "github.com/kataras/iris"
+    import "github.com/jukree/iris"
 
     // User is just a bindable object structure.
     type User struct {
@@ -243,7 +243,7 @@ Example code:
         //   - TCP_FASTOPEN. See https://lwn.net/Articles/508865/ for details.
         "github.com/valyala/tcplisten"
 
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
     )
 
     // $ go get github.com/valyala/tcplisten
@@ -290,7 +290,7 @@ Example code:
         stdContext "context"
         "time"
 
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
     )
 
 
@@ -341,7 +341,7 @@ Example Code:
 Second, and probably easier way is to use the `host.Configurator`.
 
 Note that this method requires an extra import statement of
-"github.com/kataras/iris/core/host" when using go < 1.9,
+"github.com/jukree/iris/core/host" when using go < 1.9,
 if you're targeting on go1.9 then you can use the `iris#Supervisor`
 and omit the extra host import.
 
@@ -359,8 +359,8 @@ Example Code:
         stdContext "context"
         "time"
 
-        "github.com/kataras/iris"
-        "github.com/kataras/iris/core/host"
+        "github.com/jukree/iris"
+        "github.com/jukree/iris/core/host"
     )
 
     func main() {
@@ -407,7 +407,7 @@ Example Code:
 
 Read more about listening and gracefully shutdown by navigating to:
 
-    https://github.com/kataras/iris/tree/master/_examples/#http-listening
+    https://github.com/jukree/iris/tree/master/_examples/#http-listening
 
 
 Routing
@@ -521,7 +521,7 @@ Example code:
 
     package main
 
-    import "github.com/kataras/iris"
+    import "github.com/jukree/iris"
 
     func main() {
         app := iris.New()
@@ -536,7 +536,7 @@ Example code:
         //
         // Third receiver should contains the route's handler(s), they are executed by order.
         app.Handle("GET", "/", func(ctx iris.Context) {
-            // navigate to the middle of $GOPATH/src/github.com/kataras/iris/context/context.go
+            // navigate to the middle of $GOPATH/src/github.com/jukree/iris/context/context.go
             // to overview all context's method (there a lot of them, read that and you will learn how iris works too)
             ctx.HTML("Hello from " + ctx.Path()) // Hello from /
         })
@@ -666,7 +666,7 @@ Example code:
 
         // let's pass a value to the next handler
         // Values is the way handlers(or middleware) are communicating between each other.
-        ctx.Values().Set("donate_url", "https://github.com/kataras/iris#-people")
+        ctx.Values().Set("donate_url", "https://github.com/jukree/iris#-people")
         ctx.Next() // in order to execute the next handler in the chain, look donate route.
     }
 
@@ -693,14 +693,14 @@ Example Code:
     package main
 
     import (
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
 
-        "github.com/kataras/iris/middleware/logger"
-        "github.com/kataras/iris/middleware/recover"
+        "github.com/jukree/iris/middleware/logger"
+        "github.com/jukree/iris/middleware/recover"
     )
 
     // This example is equivalent to the
-    // https://github.com/kataras/iris/blob/master/_examples/hello-world/main.go
+    // https://github.com/jukree/iris/blob/master/_examples/hello-world/main.go
     //
     // It seems that additional code you
     // have to write doesn't worth it
@@ -822,7 +822,7 @@ useful to call middlewares or when many methods use the same collection of data.
 Optional `EndRequest(ctx)` function to perform any finalization after any method executed.
 
 Inheritance, recursively, see for example our `mvc.SessionController/iris.SessionController`, it has the `mvc.Controller/iris.Controller` as an embedded field
-and it adds its logic to its `BeginRequest`. Source file: https://github.com/kataras/iris/blob/master/mvc/session_controller.go.
+and it adds its logic to its `BeginRequest`. Source file: https://github.com/jukree/iris/blob/master/mvc/session_controller.go.
 
 Read access to the current route  via the `Route` field.
 
@@ -900,9 +900,9 @@ The example below is not intended to be used in production but it's a good showc
     package main
 
     import (
-        "github.com/kataras/iris"
-        "github.com/kataras/iris/middleware/basicauth"
-        "github.com/kataras/iris/mvc"
+        "github.com/jukree/iris"
+        "github.com/jukree/iris/middleware/basicauth"
+        "github.com/jukree/iris/mvc"
     )
 
     // Movie is our sample data structure.
@@ -1026,7 +1026,7 @@ The example below is not intended to be used in production but it's a good showc
 
 Another good example with a typical folder structure,
 that many developers are used to work, can be found at:
-https://github.com/kataras/iris/tree/master/_examples/mvc/overview.
+https://github.com/jukree/iris/tree/master/_examples/mvc/overview.
 
 
 Using Iris MVC for code reuse
@@ -1039,7 +1039,7 @@ different data because the view is simply handling how the data is being display
 If you're new to back-end web development read about the MVC architectural pattern first,
 a good start is that wikipedia article: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller.
 
-Follow the examples at: https://github.com/kataras/iris/tree/master/_examples/#mvc
+Follow the examples at: https://github.com/jukree/iris/tree/master/_examples/#mvc
 
 
 Parameterized Path
@@ -1050,7 +1050,7 @@ with a single known parameter and custom http errors, now it's time to see wildc
 
 iris, like net/http std package registers route's handlers
 by a Handler, the iris' type of handler is just a func(ctx iris.Context)
-where context comes from github.com/kataras/iris/context.
+where context comes from github.com/jukree/iris/context.
 
 Iris has the easiest and the most powerful routing process you have ever meet.
 
@@ -1258,7 +1258,7 @@ Static Files
     //
     // Returns the GET *Route.
     //
-    // Example: https://github.com/kataras/iris/tree/master/_examples/file-server/embedding-files-into-app
+    // Example: https://github.com/jukree/iris/tree/master/_examples/file-server/embedding-files-into-app
     StaticEmbedded(requestPath string, vdir string, assetFn func(name string) ([]byte, error), namesFn func() []string) (*Route, error)
 
     // Favicon serves static favicon
@@ -1300,7 +1300,7 @@ Example code:
 
     package main
 
-    import "github.com/kataras/iris"
+    import "github.com/jukree/iris"
 
     func main() {
         app := iris.New()
@@ -1321,7 +1321,7 @@ Example code:
         app.Run(iris.Addr(":8080"))
     }
 
-More examples can be found here: https://github.com/kataras/iris/tree/master/_examples/beginner/file-server
+More examples can be found here: https://github.com/jukree/iris/tree/master/_examples/beginner/file-server
 
 
 Middleware Ecosystem
@@ -1376,7 +1376,7 @@ Example code:
     import (
         "github.com/rs/cors"
 
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
     )
 
     func main() {
@@ -1436,7 +1436,7 @@ Example code:
 
     package main
 
-    import "github.com/kataras/iris"
+    import "github.com/jukree/iris"
 
     func main() {
         app := iris.New()
@@ -1488,7 +1488,7 @@ Example code:
 
     package main
 
-    import "github.com/kataras/iris"
+    import "github.com/jukree/iris"
 
     func main() {
         app := iris.New()
@@ -1514,7 +1514,7 @@ Example code:
     }
 
 
-A real example can be found here: https://github.com/kataras/iris/tree/master/_examples/view/embedding-templates-into-app.
+A real example can be found here: https://github.com/jukree/iris/tree/master/_examples/view/embedding-templates-into-app.
 
 Enable auto-reloading of templates on each request. Useful while developers are in dev mode
 as they no neeed to restart their app on every template edit.
@@ -1528,8 +1528,8 @@ Example code:
 
 Note:
 
-In case you're wondering, the code behind the view engines derives from the "github.com/kataras/iris/view" package,
-access to the engines' variables can be granded by "github.com/kataras/iris" package too.
+In case you're wondering, the code behind the view engines derives from the "github.com/jukree/iris/view" package,
+access to the engines' variables can be granded by "github.com/jukree/iris" package too.
 
     iris.HTML(...) is a shortcut of view.HTML(...)
     iris.Django(...)     >> >>      view.Django(...)
@@ -1537,7 +1537,7 @@ access to the engines' variables can be granded by "github.com/kataras/iris" pac
     iris.Handlebars(...) >> >>      view.Handlebars(...)
     iris.Amber(...)      >> >>      view.Amber(...)
 
-Each one of these template engines has different options located here: https://github.com/kataras/iris/tree/master/view .
+Each one of these template engines has different options located here: https://github.com/jukree/iris/tree/master/view .
 
 
 Sessions
@@ -1560,9 +1560,9 @@ Example code:
     package main
 
     import (
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
 
-        "github.com/kataras/iris/sessions"
+        "github.com/jukree/iris/sessions"
     )
 
     var (
@@ -1613,7 +1613,7 @@ Example code:
 Running the example:
 
 
-    $ go get github.com/kataras/iris/sessions
+    $ go get github.com/jukree/iris/sessions
     $ go run main.go
 
     $ curl -s http://localhost:8080/secret
@@ -1635,10 +1635,10 @@ Example Code:
     import (
         "time"
 
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
 
-        "github.com/kataras/iris/sessions"
-        "github.com/kataras/iris/sessions/sessiondb/boltdb" // <- IMPORTANT
+        "github.com/jukree/iris/sessions"
+        "github.com/jukree/iris/sessions/sessiondb/boltdb" // <- IMPORTANT
     )
 
     func main() {
@@ -1726,7 +1726,7 @@ Example Code:
 
 More examples:
 
-    https://github.com/kataras/iris/tree/master/sessions
+    https://github.com/jukree/iris/tree/master/sessions
 
 
 Websockets
@@ -1741,9 +1741,9 @@ Example Server Code:
     import (
         "fmt"
 
-        "github.com/kataras/iris"
+        "github.com/jukree/iris"
 
-        "github.com/kataras/iris/websocket"
+        "github.com/jukree/iris/websocket"
     )
 
     func main() {
@@ -1833,7 +1833,7 @@ Example Client(javascript) Code:
 Running the example:
 
 
-    $ go get github.com/kataras/iris/websocket
+    $ go get github.com/jukree/iris/websocket
     $ go run main.go
     $ start http://localhost:8080
 
@@ -1845,11 +1845,11 @@ If you enjoy what you just saw and want to learn more, please follow the below l
 
 Examples:
 
-    https://github.com/kataras/iris/tree/master/_examples
+    https://github.com/jukree/iris/tree/master/_examples
 
 Middleware:
 
-    https://github.com/kataras/iris/tree/master/middleware
+    https://github.com/jukree/iris/tree/master/middleware
     https://github.com/iris-contrib/middleware
 
 Home Page:

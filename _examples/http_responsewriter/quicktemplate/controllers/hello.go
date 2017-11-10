@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"github.com/kataras/iris/_examples/http_responsewriter/quicktemplate/templates"
+	"github.com/jukree/iris/_examples/http_responsewriter/quicktemplate/templates"
 
-	"github.com/kataras/iris"
+	"github.com/jukree/iris"
 )
 
 // Hello renders our ../templates/hello.qtpl file using the compiled ../templates/hello.qtpl.go file.

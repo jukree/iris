@@ -5,7 +5,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/kataras/iris/core/maintenance/version"
+	"github.com/jukree/iris/core/maintenance/version"
 
 	"github.com/kataras/golog"
 	"github.com/kataras/survey"
@@ -51,13 +51,13 @@ func installVersion(v version.Version) {
 	// run the updater last, so the user can star the repo and at the same time
 	// the app will update her/his local iris.
 	if confirmUpdate { // it's true only when update was available and user typed "yes".
-		repo := "github.com/kataras/iris/..."
+		repo := "github.com/jukree/iris/..."
 		cmd := exec.Command("go", "get", "-u", "-v", repo)
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stdout
 
 		if err := cmd.Run(); err != nil {
-			golog.Warnf("unexpected message while trying to go get,\nif you edited the original source code then you've to remove the whole $GOPATH/src/github.com/kataras folder and execute `go get -u github.com/kataras/iris/...` manually\n%v", err)
+			golog.Warnf("unexpected message while trying to go get,\nif you edited the original source code then you've to remove the whole $GOPATH/src/github.com/kataras folder and execute `go get -u github.com/jukree/iris/...` manually\n%v", err)
 			return
 		}
 

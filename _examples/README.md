@@ -2,7 +2,7 @@
 
 Please do learn how [net/http](https://golang.org/pkg/net/http/) std package works, first.
 
-This folder provides easy to understand code snippets on how to get started with [iris](https://github.com/kataras/iris) micro web framework.
+This folder provides easy to understand code snippets on how to get started with [iris](https://github.com/jukree/iris) micro web framework.
 
 It doesn't always contain the "best ways" but it does cover each important feature that will make you so excited to GO with iris!
 
@@ -14,7 +14,7 @@ It doesn't always contain the "best ways" but it does cover each important featu
 - [Tutorial: URL Shortener using BoltDB](https://medium.com/@kataras/a-url-shortener-service-using-go-iris-and-bolt-4182f0b00ae7)
 - [Tutorial: How to turn your Android Device into a fully featured Web Server (**MUST**)](https://twitter.com/ThePracticalDev/status/892022594031017988)
 - [POC: Convert the medium-sized project "Parrot" from native to Iris](https://github.com/iris-contrib/parrot)
-- [POC: Isomorphic react/hot reloadable/redux/css-modules starter kit](https://github.com/kataras/iris-starter-kit)
+- [POC: Isomorphic react/hot reloadable/redux/css-modules starter kit](https://github.com/jukree/iris-starter-kit)
 - [Tutorial: DropzoneJS Uploader](tutorial/dropzonejs)
 - [Tutorial: Caddy](tutorial/caddy)
 
@@ -152,7 +152,7 @@ useful to call middlewares or when many methods use the same collection of data.
 Optional `EndRequest(ctx)` function to perform any finalization after any method executed.
 
 Inheritance, see for example our `mvc.SessionController`, it has the `mvc.Controller` as an embedded field
-and it adds its logic to its `BeginRequest`, [here](https://github.com/kataras/iris/blob/master/mvc/session_controller.go). 
+and it adds its logic to its `BeginRequest`, [here](https://github.com/jukree/iris/blob/master/mvc/session_controller.go). 
 
 Register one or more relative paths and able to get path parameters, i.e
 
@@ -198,7 +198,7 @@ func(c *ExampleController) Get() string |
                                 mvc.Result or (mvc.Result, error) and so on...
 ```
 
-where [mvc.Result](https://github.com/kataras/iris/blob/master/mvc/method_result.go) is an interface which contains only that function: `Dispatch(ctx iris.Context)`.
+where [mvc.Result](https://github.com/jukree/iris/blob/master/mvc/method_result.go) is an interface which contains only that function: `Dispatch(ctx iris.Context)`.
 
 **Using Iris MVC for code reuse** 
 
@@ -309,7 +309,7 @@ You can serve [quicktemplate](https://github.com/valyala/quicktemplate) files to
 
 #### More
 
-https://github.com/kataras/iris/tree/master/middleware#third-party-handlers
+https://github.com/jukree/iris/tree/master/middleware#third-party-handlers
 
 ### Automated API Documentation
 
@@ -323,7 +323,7 @@ The `httptest` package is your way for end-to-end HTTP testing, it uses the http
 
 ### Caching
 
-iris cache library lives on its own [package](https://github.com/kataras/iris/tree/master/cache).
+iris cache library lives on its own [package](https://github.com/jukree/iris/tree/master/cache).
 
 - [Simple](cache/simple/main.go)
 
@@ -331,7 +331,7 @@ iris cache library lives on its own [package](https://github.com/kataras/iris/tr
 
 ### Sessions
 
-iris session manager lives on its own [package](https://github.com/kataras/iris/tree/master/sessions).
+iris session manager lives on its own [package](https://github.com/jukree/iris/tree/master/sessions).
 
 - [Overview](sessions/overview/main.go)
 - [Standalone](sessions/standalone/main.go)
@@ -348,7 +348,7 @@ iris session manager lives on its own [package](https://github.com/kataras/iris/
 
 ### Websockets
 
-iris websocket library lives on its own [package](https://github.com/kataras/iris/tree/master/websocket).
+iris websocket library lives on its own [package](https://github.com/jukree/iris/tree/master/websocket).
 
 The package is designed to work with raw websockets although its API is similar to the famous [socket.io](https://socket.io). I have read an article recently and I felt very contented about my decision to design a **fast** websocket-**only** package for Iris and not a backwards socket.io-like package. You can read that article by following this link: https://medium.com/@ivanderbyl/why-you-don-t-need-socket-io-6848f1c871cd.
 
@@ -363,12 +363,12 @@ The package is designed to work with raw websockets although its API is similar 
 
 ### Typescript Automation Tools
 
-typescript automation tools have their own repository: [https://github.com/kataras/iris/tree/master/typescript](https://github.com/kataras/iris/tree/master/typescript) **it contains examples**
+typescript automation tools have their own repository: [https://github.com/jukree/iris/tree/master/typescript](https://github.com/jukree/iris/tree/master/typescript) **it contains examples**
 
 > I'd like to tell you that you can use your favourite but I don't think you will find such a thing anywhere else.
 
 ### Hey, You
 
-Developers should read the [godocs](https://godoc.org/github.com/kataras/iris) and https://docs.iris-go.com for a better understanding.
+Developers should read the [godocs](https://godoc.org/github.com/jukree/iris) and https://docs.iris-go.com for a better understanding.
 
-Psst, I almost forgot; do not forget to [star or watch](https://github.com/kataras/iris/stargazers) the project in order to stay updated with the latest tech trends, it never takes more than a second!
+Psst, I almost forgot; do not forget to [star or watch](https://github.com/jukree/iris/stargazers) the project in order to stay updated with the latest tech trends, it never takes more than a second!

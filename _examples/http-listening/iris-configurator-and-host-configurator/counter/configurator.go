@@ -3,8 +3,8 @@ package counter
 import (
 	"time"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/core/host"
+	"github.com/jukree/iris"
+	"github.com/jukree/iris/core/host"
 )
 
 func Configurator(app *iris.Application) {

@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/kataras/iris/mvc"
+import "github.com/jukree/iris/mvc"
 
 type IndexController struct{ mvc.Controller }
 

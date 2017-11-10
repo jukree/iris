@@ -3,7 +3,7 @@ package methodfunc
 import (
 	"reflect"
 
-	"github.com/kataras/iris/context"
+	"github.com/jukree/iris/context"
 )
 
 // buildMethodCall builds the method caller.
